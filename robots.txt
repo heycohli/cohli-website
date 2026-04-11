@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cohli.com/sitemap.xml

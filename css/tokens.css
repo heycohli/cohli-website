@@ -1,0 +1,41 @@
+/* ============================================
+   COHLI DESIGN TOKENS
+   Brand colors, typography, spacing
+   Single source of truth for all pages
+   ============================================ */
+
+:root {
+  /* Brand palette */
+  --alabaster: #f3ede4;
+  --clay: #e0d5c0;
+  --driftwood: #c9bfae;
+  --sage: #a7b49c;
+  --sky: #9fb1c1;
+  --stone: #6c6f6f;
+  --ochre: #d2a960;
+  --terracotta: #b46b52;
+  --mauve: #b5989d;
+  --apricot: #f4ab6d;
+  --sunbeam: #f7e2a5;
+  --ember: #c98e30;
+  --dark: #2a2a2a;
+  --white: #ffffff;
+
+  /* Typography */
+  --font-headline: 'Fraunces', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-quote: 'Cormorant Garamond', serif;
+
+  /* Spacing */
+  --section-pad: 80px 24px;
+  --section-pad-mobile: 56px 20px;
+  --max-width: 1100px;
+  --max-width-wide: 1200px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-pill: 28px;
+
+  /* Transitions */
+  --ease: .2s ease;
+  --ease-slow: .3s ease;
+}

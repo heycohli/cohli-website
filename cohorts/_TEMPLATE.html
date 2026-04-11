@@ -1,0 +1,610 @@
+<!--
+  COHLI COHORT PAGE TEMPLATE
+  ===========================
+  How to use:
+  1. Copy this file as /cohorts/[slug].html (e.g., /cohorts/craveiral.html)
+  2. Find & replace all {{PLACEHOLDERS}} with real content
+  3. Add photos to /img/[slug]/
+  4. Add cohort card to homepage grid in index.html
+  5. Update sitemap.xml with the new URL
+  6. Commit and push
+
+  Placeholder reference:
+    {{COHORT_NAME}}        - e.g. "Casa Sumapaz"
+    {{COHORT_SLUG}}        - e.g. "casa-sumapaz" (lowercase, hyphenated)
+    {{COHORT_COUNTRY}}     - e.g. "Colombia"
+    {{COHORT_REGION}}      - e.g. "Cundinamarca"
+    {{COUNTRY_CODE}}       - e.g. "CO" (ISO 3166-1 alpha-2)
+    {{LOCATION_DETAIL}}    - e.g. "2,600m above sea level · 1.5 hours from Bogota"
+    {{DATE_START}}         - e.g. "2026-07-05" (ISO format for schema)
+    {{DATE_END}}           - e.g. "2026-08-16" (ISO format for schema)
+    {{DATE_DISPLAY}}       - e.g. "Jul 5 - Aug 16, 2026"
+    {{DATE_SHORT}}         - e.g. "Jul 5 - Aug 16"
+    {{DURATION}}           - e.g. "6 weeks"
+    {{FAMILIES_MAX}}       - e.g. "8-10"
+    {{PRICE_FROM}}         - e.g. "2,800" (number only, no $)
+    {{PRICE_PER_NIGHT}}    - e.g. "$67"
+    {{SPOTS_LEFT}}         - e.g. "5"
+    {{DEPOSIT_AMOUNT}}     - e.g. "$1,000"
+    {{PAYMENT_2_AMOUNT}}   - e.g. "$900"
+    {{PAYMENT_3_AMOUNT}}   - e.g. "$900"
+    {{META_DESC}}          - Short description for SEO (under 160 chars)
+    {{OG_DESC}}            - Short description for social sharing
+    {{WIFI_SPEED}}         - e.g. "50+ Mbps"
+    {{TEMP_RANGE}}         - e.g. "18-22°C"
+    {{VENUE_YEAR}}         - e.g. "Year 2" or "New venue"
+    {{AIRPORT_NAME}}       - e.g. "El Dorado International"
+    {{AIRPORT_CODE}}       - e.g. "BOG"
+    {{TRANSFER_TIME}}      - e.g. "1.5 hour drive"
+    {{TRANSFER_COST}}      - e.g. "$30"
+
+  Sections that need custom writing (copy from brief, not just placeholder swap):
+    - Letter from Lauren & Tiago (unique per cohort)
+    - Place description + surroundings
+    - Daily rhythm timeline
+    - Packing tips
+    - FAQ questions & answers
+    - Testimonials (if returning venue)
+    - Gallery image descriptions
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{COHORT_NAME}} - Family Coliving in {{COHORT_COUNTRY}} | Cohli</title>
+  <meta name="description" content="{{META_DESC}}">
+  <link rel="canonical" href="https://cohli.com/cohorts/{{COHORT_SLUG}}.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{COHORT_NAME}} - Family Coliving in {{COHORT_COUNTRY}} | Cohli">
+  <meta property="og:description" content="{{OG_DESC}}">
+  <meta property="og:url" content="https://cohli.com/cohorts/{{COHORT_SLUG}}.html">
+  <meta property="og:image" content="https://cohli.com/img/{{COHORT_SLUG}}/og-image.jpg">
+  <meta name="theme-color" content="#b46b52">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/cohort.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "{{COHORT_NAME}} - Cohli Family Coliving",
+    "description": "{{META_DESC}}",
+    "startDate": "{{DATE_START}}",
+    "endDate": "{{DATE_END}}",
+    "location": {
+      "@type": "Place",
+      "name": "{{COHORT_NAME}}",
+      "address": { "@type": "PostalAddress", "addressRegion": "{{COHORT_REGION}}", "addressCountry": "{{COUNTRY_CODE}}" }
+    },
+    "organizer": { "@type": "Organization", "name": "Cohli", "url": "https://cohli.com" },
+    "offers": {
+      "@type": "Offer",
+      "price": "{{PRICE_FROM}}",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div>
+      <a href="/" class="logo">cohli</a>
+      <div class="logo-sub">{{COHORT_NAME}}</div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">The Place</a>
+      <a href="#included">What's Included</a>
+      <a href="#daily">Daily Life</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#" class="nav-cta">Apply Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="cohort-hero">
+  <div class="cohort-hero-bg"></div>
+  <div class="cohort-hero-overlay"></div>
+  <div class="cohort-hero-content">
+    <div class="hero-badge"><span class="dot"></span> Accepting Applications</div>
+    <h1>{{COHORT_NAME}}</h1>
+    <div class="hero-location">{{COHORT_REGION}}, {{COHORT_COUNTRY}} &middot; {{LOCATION_DETAIL}}</div>
+    <div class="hero-quick">
+      <span class="hero-quick-item">{{DATE_DISPLAY}}</span>
+      <span class="hero-quick-item">{{DURATION}}</span>
+      <span class="hero-quick-item">{{FAMILIES_MAX}} families</span>
+      <span class="hero-quick-item">From ${{PRICE_FROM}}</span>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <div class="sticky-bar-inner">
+    <div class="sticky-info">
+      <span><strong>{{COHORT_NAME}}</strong> &middot; {{DATE_SHORT}}</span>
+      <span>From <strong>${{PRICE_FROM}}/family</strong></span>
+      <span style="color:var(--terracotta); font-weight:600;">{{SPOTS_LEFT}} spots left</span>
+    </div>
+    <button class="sticky-cta" aria-label="Apply for This Cohort">Apply for This Cohort</button>
+  </div>
+</div>
+
+<!-- PERSONAL LETTER FROM FOUNDERS -->
+<!-- REQUIRED: Every cohort page must include this section. Write unique content per cohort. -->
+<section class="section letter-section fade-in">
+  <div class="section-inner">
+    <div class="letter-inner">
+      <div class="letter-photo-col">
+        <div class="letter-photo"><span>Lauren & Tiago photo</span></div>
+        <div class="letter-names">Lauren & Tiago</div>
+      </div>
+      <div class="letter-body">
+        <h3><!-- WRITE: A heading that captures the feeling of this specific place --></h3>
+        <p><!-- WRITE: Opening paragraph - your first impression of arriving at this place --></p>
+        <p><!-- WRITE: What happened when community started forming here --></p>
+        <p><!-- WRITE: What makes this specific location/venue special --></p>
+        <p><!-- WRITE: Honest acknowledgment of challenges + how the structure holds them --></p>
+        <p><!-- WRITE: Invitation / encouragement for hesitant families --></p>
+        <p class="letter-sig"><!-- WRITE: Sign-off with location flavor -->,<br>Lauren & Tiago</p>
+        <p class="letter-context">Lauren and Tiago are the co-founders of Cohli and parents of two (Maya, 5, and Koa, 3). They've lived and traveled through 30+ countries and have been designing family coliving experiences since 2024.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK FACTS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="facts-grid">
+      <div class="fact-card">
+        <div class="fact-icon">&#128197;</div>
+        <div class="fact-value">{{DURATION}}</div>
+        <div class="fact-label">Duration</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">&#128106;</div>
+        <div class="fact-value">{{FAMILIES_MAX}}</div>
+        <div class="fact-label">Families max</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">&#127891;</div>
+        <div class="fact-value">All ages</div>
+        <div class="fact-label">Kids welcome</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">&#127748;</div>
+        <div class="fact-value">{{TEMP_RANGE}}</div>
+        <div class="fact-label">Avg. temperature</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">&#128187;</div>
+        <div class="fact-value">{{WIFI_SPEED}}</div>
+        <div class="fact-label">WiFi speed</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">&#127793;</div>
+        <div class="fact-value">{{VENUE_YEAR}}</div>
+        <div class="fact-label"><!-- "Returning venue" or "New venue" --></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLACE -->
+<section class="section" id="about" style="background:white;">
+  <div class="section-inner">
+    <div class="section-label">The Place</div>
+    <div class="section-title"><!-- WRITE: One-line essence of the venue --></div>
+    <p class="section-desc"><!-- WRITE: 2-3 sentence description of the property and its character --></p>
+
+    <!-- Gallery: add 5 photos to /img/{{COHORT_SLUG}}/ -->
+    <div class="gallery">
+      <div class="gallery-item img-placeholder"><span><!-- Photo 1 description --></span></div>
+      <div class="gallery-item img-placeholder"><span><!-- Photo 2 description --></span></div>
+      <div class="gallery-item img-placeholder"><span><!-- Photo 3 description --></span></div>
+      <div class="gallery-item img-placeholder"><span><!-- Photo 4 description --></span></div>
+      <div class="gallery-item img-placeholder"><span><!-- Photo 5 description --></span></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:36px;">
+      <div>
+        <h4 style="font-size:1.05rem; margin-bottom:8px;">Accommodation</h4>
+        <p style="font-size:.9rem; color:var(--stone);"><!-- WRITE: Room types, bathrooms, capacity, linens, common areas --></p>
+      </div>
+      <div>
+        <h4 style="font-size:1.05rem; margin-bottom:8px;">The Surroundings</h4>
+        <p style="font-size:.9rem; color:var(--stone);"><!-- WRITE: Distance from airport/city, region highlights, weekend excursion options --></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section" id="included">
+  <div class="section-inner">
+    <div class="section-label">What's Included</div>
+    <div class="section-title">Everything your family needs</div>
+    <p class="section-desc">We've designed this so you can focus on living, not logistics.</p>
+
+    <div class="included-grid">
+      <div class="included-card">
+        <div class="included-icon live">&#127968;</div>
+        <div>
+          <h4>Private Family Room</h4>
+          <p>Your own space to retreat to. Beds, storage, and quiet when you need it.</p>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon eat">&#127858;</div>
+        <div>
+          <h4>3 Shared Meals Daily</h4>
+          <p><!-- WRITE: Meal details specific to location / cuisine --></p>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon grow">&#127891;</div>
+        <div>
+          <h4>Worldschooling Program</h4>
+          <p><!-- WRITE: Learning activities specific to this location --></p>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon extra">&#128187;</div>
+        <div>
+          <h4>Coworking Space</h4>
+          <p>Dedicated desks, {{WIFI_SPEED}} internet, power outlets. Work while kids are in activities.</p>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon live">&#127758;</div>
+        <div>
+          <h4>Weekend Excursions</h4>
+          <p><!-- WRITE: Specific excursion options for this region --></p>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon grow">&#128101;</div>
+        <div>
+          <h4>Community Programming</h4>
+          <p>Weekly parent circles, skill-shares, family game nights, and facilitated conversations.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; padding:20px; background:white; border-radius:12px; border:1px solid var(--clay);">
+      <h4 style="font-size:.9rem; color:var(--stone); margin-bottom:8px;">Not included (you'll arrange separately):</h4>
+      <p style="font-size:.85rem; color:var(--driftwood);">Flights to {{AIRPORT_NAME}} &middot; Airport transfer (~{{TRANSFER_COST}}/family each way) &middot; Personal travel insurance &middot; Visa fees (if applicable) &middot; Personal expenses &middot; Laundry service</p>
+    </div>
+  </div>
+</section>
+
+<!-- A DAY IN THE LIFE -->
+<section class="section" id="daily" style="background:white;">
+  <div class="section-inner">
+    <div class="section-label">Daily Rhythm</div>
+    <div class="section-title">What a Wednesday looks like</div>
+    <p class="section-desc">There's a rhythm, not a rigid schedule. Some days flow differently. This is the shape of a typical midweek day.</p>
+
+    <div class="day-timeline">
+      <!-- WRITE: 6-8 time blocks reflecting the rhythm at THIS specific location.
+           Keep the structure (day-block > day-time + day-content > h4 + p).
+           Adjust times, meals, activities to match climate/culture. -->
+      <div class="day-block">
+        <div class="day-time">7:00 AM</div>
+        <div class="day-content">
+          <h4>Slow Morning</h4>
+          <p><!-- WRITE: Breakfast scene with local flavor --></p>
+        </div>
+      </div>
+      <div class="day-block">
+        <div class="day-time">9:00 AM</div>
+        <div class="day-content">
+          <h4>Learning Circle</h4>
+          <p><!-- WRITE: Educational activities tied to this location --></p>
+        </div>
+      </div>
+      <div class="day-block">
+        <div class="day-time">11:00 AM</div>
+        <div class="day-content">
+          <h4>Outdoor Exploration</h4>
+          <p><!-- WRITE: What kids do outside at this venue --></p>
+        </div>
+      </div>
+      <div class="day-block">
+        <div class="day-time">12:30 PM</div>
+        <div class="day-content">
+          <h4>Shared Lunch</h4>
+          <p><!-- WRITE: Lunch scene with local cuisine --></p>
+        </div>
+      </div>
+      <div class="day-block">
+        <div class="day-time">1:30 PM</div>
+        <div class="day-content">
+          <h4>Rest / Free Time</h4>
+          <p>Quiet hour. Younger kids nap. Older kids play board games or draw. Some parents sneak in a chapter of their book.</p>
+        </div>
+      </div>
+      <div class="day-block">
+        <div class="day-time">2:30 PM</div>
+        <div class="day-content">
+          <h4>Parent Work Block</h4>
+          <p>Coworking space opens for focused work. Kids have supervised free play, craft stations, and outdoor games.</p>
+        </div>
+      </div>
+      <div class="day-block">
+        <div class="day-time">5:00 PM</div>
+        <div class="day-content">
+          <h4>Community Activity</h4>
+          <p><!-- WRITE: Example activities tied to local culture --></p>
+        </div>
+      </div>
+      <div class="day-block">
+        <div class="day-time">6:30 PM</div>
+        <div class="day-content">
+          <h4>Dinner & Evening</h4>
+          <p><!-- WRITE: Evening scene with local flavor --></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing-section" id="pricing">
+  <div class="section-inner">
+    <div class="section-label">Investment</div>
+    <div class="section-title">Transparent pricing, no surprises</div>
+    <p class="section-desc">Here's exactly what you'll pay and what's included. We believe in clarity.</p>
+
+    <div class="pricing-box">
+      <div class="pricing-header">
+        <div>
+          <div class="pricing-total">${{PRICE_FROM}}</div>
+          <div class="pricing-unit">per family / {{DURATION}} cohort</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:.85rem; color:var(--stone);">That's roughly</div>
+          <div style="font-family:'Fraunces',serif; font-size:1.2rem; font-weight:700; color:var(--ember);">{{PRICE_PER_NIGHT}} / night / family</div>
+        </div>
+      </div>
+
+      <div class="pricing-lines">
+        <div class="pricing-line included">
+          <span class="label">Private family room ({{DURATION}})</span>
+          <span class="value">Included</span>
+        </div>
+        <div class="pricing-line included">
+          <span class="label">3 meals daily (breakfast, lunch, dinner)</span>
+          <span class="value">Included</span>
+        </div>
+        <div class="pricing-line included">
+          <span class="label">Worldschooling program</span>
+          <span class="value">Included</span>
+        </div>
+        <div class="pricing-line included">
+          <span class="label">Coworking space + WiFi</span>
+          <span class="value">Included</span>
+        </div>
+        <div class="pricing-line included">
+          <span class="label">Weekend excursions</span>
+          <span class="value">Included</span>
+        </div>
+        <div class="pricing-line included">
+          <span class="label">Community programming</span>
+          <span class="value">Included</span>
+        </div>
+        <div class="pricing-line">
+          <span class="label">Flights to {{AIRPORT_NAME}}</span>
+          <span class="value">Not included</span>
+        </div>
+        <div class="pricing-line">
+          <span class="label">Travel insurance</span>
+          <span class="value">Not included</span>
+        </div>
+      </div>
+
+      <div class="pricing-note">
+        <!-- WRITE: Price comparison to typical alternative (Airbnb + meals + activities) for this location -->
+        <strong>How this compares:</strong> ...
+      </div>
+
+      <h4 style="margin-top:28px; margin-bottom:16px;">Payment Timeline</h4>
+      <div class="payment-timeline">
+        <div class="payment-step">
+          <div class="payment-dot"></div>
+          <div>
+            <div class="when">Upon acceptance: {{DEPOSIT_AMOUNT}} deposit</div>
+            <div class="what">Secures your family's spot. Refundable if minimum cohort size (6 families) isn't met.</div>
+          </div>
+        </div>
+        <div class="payment-step">
+          <div class="payment-dot" style="background:var(--ochre);"></div>
+          <div>
+            <div class="when">30 days later: {{PAYMENT_2_AMOUNT}}</div>
+            <div class="what">50% of remaining balance.</div>
+          </div>
+        </div>
+        <div class="payment-step">
+          <div class="payment-dot" style="background:var(--sage);"></div>
+          <div>
+            <div class="when">60 days later: {{PAYMENT_3_AMOUNT}}</div>
+            <div class="what">Final balance. You're all set.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (include if returning venue with past families; remove if new venue) -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label"><!-- "From Last Year" or "What Families Say" --></div>
+    <div class="section-title"><!-- WRITE: Context for testimonials --></div>
+    <p class="section-desc"><!-- WRITE: How many families participated previously --></p>
+
+    <div class="testimonial-pair">
+      <div class="test-card">
+        <div class="test-text"><!-- WRITE: Testimonial 1 --></div>
+        <div class="test-author"><!-- Family name or "Family Testimonial" --></div>
+        <div class="test-detail"><!-- Cohort + family size + country --></div>
+      </div>
+      <div class="test-card">
+        <div class="test-text"><!-- WRITE: Testimonial 2 --></div>
+        <div class="test-author"><!-- Family name or "Family Testimonial" --></div>
+        <div class="test-detail"><!-- Cohort + family size + country --></div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <div class="gallery" style="grid-template-columns:repeat(4,1fr); grid-template-rows:180px;">
+        <div class="gallery-item img-placeholder" style="grid-column:auto;"><span><!-- Past cohort photo 1 --></span></div>
+        <div class="gallery-item img-placeholder"><span><!-- Past cohort photo 2 --></span></div>
+        <div class="gallery-item img-placeholder"><span><!-- Past cohort photo 3 --></span></div>
+        <div class="gallery-item img-placeholder"><span><!-- Past cohort photo 4 --></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION / MAP -->
+<section class="section" style="background:white;">
+  <div class="section-inner">
+    <div class="section-label">Getting There</div>
+    <div class="section-title">How to reach {{COHORT_NAME}}</div>
+
+    <div class="map-placeholder"><span style="position:relative; z-index:1; color:var(--stone);">Interactive map: {{AIRPORT_NAME}} &rarr; {{COHORT_NAME}} ({{TRANSFER_TIME}})</span></div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-top:28px;">
+      <div>
+        <h4 style="font-size:.95rem; margin-bottom:6px;">Nearest Airport</h4>
+        <p style="font-size:.85rem; color:var(--stone);">{{AIRPORT_NAME}} ({{AIRPORT_CODE}}). <!-- WRITE: Which airlines / routes --></p>
+      </div>
+      <div>
+        <h4 style="font-size:.95rem; margin-bottom:6px;">Transfer</h4>
+        <p style="font-size:.85rem; color:var(--stone);">{{TRANSFER_TIME}} from {{AIRPORT_CODE}}. We can arrange shared transport (~{{TRANSFER_COST}}/family each way) or you can rent a car.</p>
+      </div>
+      <div>
+        <h4 style="font-size:.95rem; margin-bottom:6px;">Visa</h4>
+        <p style="font-size:.85rem; color:var(--stone);"><!-- WRITE: Visa situation for this country --></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET YOUR HOSTS -->
+<section class="section" style="background:linear-gradient(135deg, rgba(180,107,82,.05) 0%, rgba(167,180,156,.05) 100%);">
+  <div class="section-inner">
+    <div class="section-label fade-in">Your Hosts</div>
+    <div class="section-title fade-in">Meet Tiago & Lauren</div>
+    <p class="section-desc fade-in">We don't just organize cohorts. We live them. Our family will be at {{COHORT_NAME}} with yours.</p>
+
+    <div class="host-grid">
+      <div class="host-card fade-in">
+        <div class="host-photo img-placeholder" style="width:120px;height:120px;border-radius:50%;margin:0 auto 16px;"><span>Photo</span></div>
+        <h4>Tiago & Lauren</h4>
+        <div class="role">Cohli Founders & Cohort Hosts</div>
+        <p>We've been traveling with our two kids, Maya and Koa, since 2022. We started Cohli because we kept finding amazing families on the road who were all looking for the same thing: real community. We'll be at every shared meal, every morning circle, and probably staying up too late at the fire pit.</p>
+      </div>
+      <div class="host-card fade-in">
+        <div class="host-photo img-placeholder" style="width:120px;height:120px;border-radius:50%;margin:0 auto 16px;"><span>Photo</span></div>
+        <h4><!-- WRITE: Local host name --></h4>
+        <div class="role"><!-- WRITE: Local host role --></div>
+        <p><!-- WRITE: Local host bio --></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKING / PRACTICAL TIPS -->
+<section class="section" style="background:white;">
+  <div class="section-inner">
+    <div class="section-label fade-in">Before You Go</div>
+    <div class="section-title fade-in">What families wish they'd known</div>
+    <p class="section-desc fade-in">Practical tips from families who've done this cohort before.</p>
+
+    <div class="pack-grid">
+      <!-- WRITE: 6 packing/practical tips specific to this location's climate, terrain, culture -->
+      <div class="pack-item fade-in"><span class="pack-icon">&#127777;</span><div><strong><!-- Tip 1 title --></strong> <!-- Tip 1 detail --></div></div>
+      <div class="pack-item fade-in"><span class="pack-icon">&#128094;</span><div><strong><!-- Tip 2 title --></strong> <!-- Tip 2 detail --></div></div>
+      <div class="pack-item fade-in"><span class="pack-icon">&#128268;</span><div><strong><!-- Tip 3 title --></strong> <!-- Tip 3 detail --></div></div>
+      <div class="pack-item fade-in"><span class="pack-icon">&#128247;</span><div><strong><!-- Tip 4 title --></strong> <!-- Tip 4 detail --></div></div>
+      <div class="pack-item fade-in"><span class="pack-icon">&#128218;</span><div><strong><!-- Tip 5 title --></strong> <!-- Tip 5 detail --></div></div>
+      <div class="pack-item fade-in"><span class="pack-icon">&#128138;</span><div><strong><!-- Tip 6 title --></strong> <!-- Tip 6 detail --></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Questions About This Cohort</div>
+    <div class="section-title">What families ask about {{COHORT_NAME}}</div>
+
+    <div style="max-width:700px;">
+      <!-- WRITE: 4-6 FAQ items specific to this cohort's location, climate, logistics -->
+      <div class="faq-item">
+        <button class="faq-q" aria-label="<!-- Question 1 -->">
+          <!-- Question 1 -->
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><!-- Answer 1 --></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-label="<!-- Question 2 -->">
+          <!-- Question 2 -->
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><!-- Answer 2 --></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-label="<!-- Question 3 -->">
+          <!-- Question 3 -->
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><!-- Answer 3 --></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-label="<!-- Question 4 -->">
+          <!-- Question 4 -->
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><!-- Answer 4 --></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-label="<!-- Question 5 -->">
+          <!-- Question 5 -->
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><!-- Answer 5 --></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="apply-section">
+  <h2>{{SPOTS_LEFT}} spots remaining for <!-- month --></h2>
+  <p>Tell us about your family. The application takes about 10 minutes. We'll be in touch within a week.</p>
+  <a href="#" class="btn-white">Apply for {{COHORT_NAME}}</a>
+  <p style="margin-top:16px; font-size:.85rem; opacity:.6;">Or <a href="#" style="color:white; text-decoration:underline;">schedule a call</a> to ask us anything first.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>{{COHORT_NAME}} x <a href="/" style="color:var(--apricot); text-decoration:none; font-weight:600;">Cohli</a> &middot; Nomadic Family Coliving</p>
+  <p style="margin-top:8px;">&copy; 2026 Cohli LLC &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">All Cohorts</a></p>
+</footer>
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# www to non-www
+https://www.cohli.com/* https://cohli.com/:splat 301
+
+# Old Nomad Nest URLs (if any traffic comes from old links)
+/nomad-nest/* / 301
