@@ -20,16 +20,24 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div>
+    <div class="logo-wrap">
       <a href="/" class="logo">cohli</a>
-      <div class="logo-sub">Craveiral</div>
+      <span class="logo-sep">/</span>
+      <span class="logo-sub">Craveiral</span>
     </div>
     <div class="nav-links">
       <a href="/#cohorts">All Cohorts</a>
       <a href="#" class="nav-cta">Join Interest List</a>
     </div>
+    <button class="mobile-menu" aria-label="Open menu">
+      <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
   </div>
 </nav>
+<div class="mobile-overlay" id="mobileMenu">
+  <a href="/#cohorts">All Cohorts</a>
+  <a href="#" class="nav-cta">Join Interest List</a>
+</div>
 
 <!-- HERO -->
 <section class="cohort-hero">

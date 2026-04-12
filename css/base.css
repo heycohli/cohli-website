@@ -31,8 +31,14 @@ nav.scrolled { background: rgba(255,255,255,.97); box-shadow: 0 2px 20px rgba(0,
   font-family: var(--font-headline); font-size: 1.6rem; font-weight: 900;
   color: var(--terracotta); text-decoration: none; letter-spacing: -.5px;
 }
+.logo-wrap { display: flex; align-items: baseline; gap: 0; }
+.logo-sep {
+  font-size: 1.1rem; color: var(--driftwood); margin: 0 8px;
+  font-weight: 300; opacity: .5;
+}
 .logo-sub {
-  font-size: .7rem; color: var(--stone); font-family: var(--font-body); font-weight: 400;
+  font-size: .95rem; color: var(--stone); font-family: var(--font-body); font-weight: 500;
+  letter-spacing: 0;
 }
 .nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a {

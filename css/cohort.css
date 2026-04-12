@@ -14,6 +14,10 @@
   background: linear-gradient(135deg, #8fa682 0%, #7a9b6e 30%, #5a7a4e 60%, #3d5c32 100%);
   opacity: .12;
 }
+.cohort-hero-bg.has-image {
+  background-size: cover; background-position: center;
+  opacity: 1; filter: none;
+}
 .cohort-hero-overlay {
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(to top, rgba(42,42,42,.7) 0%, rgba(42,42,42,.1) 50%, transparent 100%);
