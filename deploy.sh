@@ -2,20 +2,14 @@
 # Cohli Website Deploy Script
 # Usage:
 #   ./deploy.sh preview   → Deploy to a preview URL to check first
-#   ./deploy.sh live      → Deploy to production (cohli-website.pages.dev)
+#   ./deploy.sh live      → Promote to production (cohli-website.pages.dev)
 #   ./deploy.sh           → Same as preview (safe default)
 
 set -e
 
 ACTION="${1:-preview}"
 
-# Check for changes
-if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
-  echo "✅ No changes to deploy."
-  exit 0
-fi
-
-# Stage and commit
+# Stage and commit any new changes (skip if nothing new)
 git add .
 git commit -m "Update: $(date '+%b %d %H:%M')" 2>/dev/null || true
 
