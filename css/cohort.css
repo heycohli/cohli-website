@@ -20,7 +20,8 @@
 }
 .cohort-hero-overlay {
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(to top, rgba(42,42,42,.7) 0%, rgba(42,42,42,.1) 50%, transparent 100%);
+  background:
+    linear-gradient(to top, rgba(30,30,30,.75) 0%, rgba(30,30,30,.4) 40%, rgba(30,30,30,.25) 70%, rgba(30,30,30,.15) 100%);
 }
 .cohort-hero-content {
   position: relative; z-index: 2; max-width: var(--max-width); margin: 0 auto; width: 100%; color: white;
