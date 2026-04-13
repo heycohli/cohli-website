@@ -325,6 +325,77 @@
       opacity: .8;
     }
 
+    /* Our Educators section */
+    .educators-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .educator-card {
+      text-align: center;
+      padding: 40px 28px 36px;
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--clay);
+      transition: var(--ease-slow);
+    }
+    .educator-card:hover {
+      border-color: var(--driftwood);
+      box-shadow: 0 8px 24px rgba(0,0,0,.06);
+      transform: translateY(-2px);
+    }
+    .educator-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      background: var(--clay);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 3px solid var(--driftwood);
+    }
+    .educator-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .educator-photo span {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--driftwood);
+    }
+    .educator-name {
+      font-family: var(--font-headline);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .educator-origin {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .educator-bio {
+      font-size: .9rem;
+      color: var(--stone);
+      line-height: 1.7;
+    }
+    .educator-cohorts {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--clay);
+      font-size: .8rem;
+      color: var(--driftwood);
+      font-weight: 500;
+    }
+
     /* Context section */
     .context-section {
       background: white;
@@ -486,6 +557,41 @@
       Apply to Teach
       <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
+  </div>
+</section>
+
+<!-- OUR EDUCATORS -->
+<section class="section" id="our-educators">
+  <div class="section-inner">
+    <div class="section-label fade-in">Our Educators</div>
+    <h2 class="section-title fade-in">The People Behind Cohli Kids</h2>
+    <p class="section-desc fade-in">We work with experienced educators from around the world. Each one brings their own philosophy, training, and perspective — and each one shapes what Cohli Kids becomes.</p>
+
+    <div class="educators-grid">
+      <div class="educator-card fade-in">
+        <div class="educator-photo"><!-- Photo needed: autumn-educator.jpg --><span>A</span></div>
+        <div class="educator-name">Autumn</div>
+        <div class="educator-origin">United States</div>
+        <p class="educator-bio">10 years teaching in public and private schools, from preschool through 4th grade. Now homeschooling her five children while traveling. Autumn follows children's interests and adapts to different learning styles — no single methodology, just what works for each child.</p>
+        <div class="educator-cohorts">Aterra, Portugal &middot; Upcoming: Aterra 2026</div>
+      </div>
+
+      <div class="educator-card fade-in fade-in-delay-1">
+        <div class="educator-photo"><!-- Photo needed: keyla-educator.jpg --><span>K</span></div>
+        <div class="educator-name">Keyla</div>
+        <div class="educator-origin">Costa Rica</div>
+        <p class="educator-bio">Four years at a Montessori school, now training in Waldorf pedagogy while teaching 4th grade at a Waldorf school. Keyla brings a deep love for being present with children and watching them grow — and believes the program gets better with every cohort.</p>
+        <div class="educator-cohorts">Con Smania, Costa Rica &middot; Upcoming: Aterra 2026</div>
+      </div>
+
+      <div class="educator-card fade-in fade-in-delay-2">
+        <div class="educator-photo"><!-- Photo needed: lorena-educator.jpg --><span>L</span></div>
+        <div class="educator-name">Lorena</div>
+        <div class="educator-origin">Colombia</div>
+        <p class="educator-bio">15 years in alternative, community-based, and deschooled education. Licensed in Basic Education (Humanities & Spanish Language) with a specialization in Children's & Young Adult Literature and studies in Transpersonal Psychology. Lorena creates learning spaces through language, literature, territory, art, and project-based exploration — building self-directed, autodidactic skills in children while facilitating community learning for adults.</p>
+        <div class="educator-cohorts">Casa Sumapaz, Colombia</div>
+      </div>
+    </div>
   </div>
 </section>
 
