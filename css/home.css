@@ -192,6 +192,13 @@
 .cta-section h2 { font-family: var(--font-headline); font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; }
 .cta-section p { font-size: 1.1rem; opacity: .85; max-width: 500px; margin: 0 auto 32px; }
 
+/* === COHLI KIDS SECTION RESPONSIVE === */
+@media (max-width: 900px) {
+  #education .section-inner > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
   .hero h1 { font-size: 2.4rem; }
