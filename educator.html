@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teach With Us - Cohli | Educator & Lead Teacher Positions</title>
+  <meta name="description" content="Join Cohli's educator team. We're looking for lead teachers and assistant teachers to facilitate learning experiences for children aged 2-12 in international coliving cohorts.">
+  <meta name="keywords" content="educator jobs, lead teacher, assistant teacher, international education, teaching abroad, coliving, worldschooling">
+  <link rel="canonical" href="https://cohli.com/educator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Teach With Us - Cohli">
+  <meta property="og:description" content="Join Cohli's educator team. Facilitate learning for children aged 2-12 in international coliving cohorts.">
+  <meta property="og:url" content="https://cohli.com/educator.html">
+  <meta property="og:image" content="https://cohli.com/img/educator/og-image.jpg">
+  <meta property="og:site_name" content="Cohli">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#b46b52">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+
+  <style>
+    /* PAGE-SPECIFIC STYLES FOR EDUCATOR PAGE */
+
+    /* Hero section */
+    .hero-educator {
+      padding: 140px 24px 80px;
+      background: linear-gradient(135deg, var(--terracotta) 0%, rgba(180,107,82,.85) 50%, var(--driftwood) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: white;
+    }
+    .hero-educator::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="dots" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse"><circle cx="40" cy="40" r="2" fill="rgba(255,255,255,.08)"/></pattern></defs><rect width="1200" height="600" fill="none"/><rect width="1200" height="600" fill="url(%23dots)"/></svg>');
+      opacity: 0.5;
+    }
+    .hero-educator-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-educator h1 {
+      font-family: var(--font-headline);
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: white;
+    }
+    .hero-educator-sub {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,.95);
+      margin-bottom: 40px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .hero-educator-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: var(--terracotta);
+      padding: 16px 40px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--ease);
+      font-size: 1.05rem;
+    }
+    .hero-educator-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+
+    /* Breadcrumb nav */
+    .logo-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+    }
+
+    /* Role comparison cards */
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .role-card {
+      background: white;
+      padding: 40px 32px;
+      border-radius: var(--radius-md);
+      border: 2px solid var(--clay);
+      transition: var(--ease-slow);
+    }
+    .role-card:hover {
+      border-color: var(--terracotta);
+      box-shadow: 0 8px 32px rgba(180,107,82,.12);
+      transform: translateY(-4px);
+    }
+    .role-card-title {
+      font-family: var(--font-headline);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+    .role-card-points {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+    .role-card-point {
+      padding-left: 24px;
+      margin-bottom: 16px;
+      position: relative;
+      font-size: .95rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+    .role-card-point::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--terracotta);
+      font-weight: 900;
+    }
+    .role-card-meta {
+      padding-top: 24px;
+      border-top: 1px solid var(--clay);
+      margin-top: 24px;
+    }
+    .role-meta-item {
+      display: block;
+      margin-bottom: 12px;
+      font-size: .9rem;
+      color: var(--stone);
+    }
+    .role-meta-label {
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    /* Timeline section */
+    .timeline {
+      max-width: 720px;
+      margin: 48px auto 0;
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--clay);
+    }
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+    .timeline-time {
+      font-family: var(--font-headline);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--terracotta);
+    }
+    .timeline-content {
+      color: var(--stone);
+      line-height: 1.7;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 640px) {
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .timeline-time {
+        font-size: 1rem;
+      }
+    }
+
+    /* Who we look for grid */
+    .traits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .trait-card {
+      background: white;
+      padding: 32px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--clay);
+      transition: var(--ease-slow);
+    }
+    .trait-card:hover {
+      border-color: var(--terracotta);
+      background: linear-gradient(135deg, rgba(180,107,82,.02) 0%, transparent 100%);
+      transform: translateY(-2px);
+    }
+    .trait-title {
+      font-family: var(--font-headline);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .trait-desc {
+      font-size: .9rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+
+    /* Location pills */
+    .location-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+      justify-content: center;
+    }
+    .location-pill {
+      background: white;
+      color: var(--terracotta);
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      font-size: .9rem;
+      font-weight: 600;
+      border: 1.5px solid var(--terracotta);
+      transition: var(--ease);
+    }
+    .location-pill:hover {
+      background: var(--terracotta);
+      color: white;
+    }
+
+    /* Honest section */
+    .section-honest {
+      background: var(--driftwood);
+      color: white;
+    }
+    .section-honest .section-title,
+    .section-honest .section-label {
+      color: white;
+    }
+    .section-honest .section-desc {
+      color: rgba(255,255,255,.9);
+    }
+    .honest-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .honest-card {
+      background: rgba(255,255,255,.1);
+      padding: 32px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,.2);
+      backdrop-filter: blur(8px);
+    }
+    .honest-card-title {
+      font-family: var(--font-headline);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .honest-card-text {
+      font-size: .9rem;
+      color: rgba(255,255,255,.85);
+      line-height: 1.6;
+    }
+
+    /* CTA section */
+    .section-educator-cta {
+      background: var(--terracotta);
+      color: white;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .section-educator-cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .section-educator-cta h2 {
+      font-family: var(--font-headline);
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: white;
+    }
+    .section-educator-cta p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.95);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .section-educator-cta .btn-white {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+    .section-educator-cta-email {
+      font-size: .9rem;
+      color: rgba(255,255,255,.8);
+    }
+    .section-educator-cta-email a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--ease);
+    }
+    .section-educator-cta-email a:hover {
+      opacity: .8;
+    }
+
+    /* Context section */
+    .context-section {
+      background: white;
+      border-bottom: 1px solid var(--clay);
+    }
+    .context-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .context-label {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: var(--terracotta);
+      margin-bottom: 8px;
+    }
+    .context-title {
+      font-family: var(--font-headline);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .context-text {
+      font-size: .95rem;
+      color: var(--stone);
+      line-height: 1.8;
+    }
+
+    /* Quote/testimonial style if needed later */
+    .quote {
+      font-family: var(--font-quote);
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--terracotta);
+      margin: 40px 0;
+    }
+
+    /* Footer styles */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 24px 24px;
+    }
+    .footer-inner {
+      max-width: var(--max-width-wide);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-size: .9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,.7);
+      margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block;
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      font-size: .85rem;
+      margin-bottom: 12px;
+      transition: var(--ease);
+    }
+    .footer-col a:hover {
+      color: white;
+    }
+    .footer-col p {
+      font-size: .85rem;
+      color: rgba(255,255,255,.65);
+      line-height: 1.6;
+    }
+    .footer-bottom {
+      max-width: var(--max-width-wide);
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+      font-size: .8rem;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-educator h1 {
+        font-size: 2rem;
+      }
+      .hero-educator {
+        padding: 100px 24px 60px;
+      }
+      .section-educator-cta h2 {
+        font-size: 1.8rem;
+      }
+      .context-title {
+        font-size: 1.4rem;
+      }
+      .role-grid {
+        grid-template-columns: 1fr;
+      }
+      .traits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-educator h1 {
+        font-size: 1.6rem;
+      }
+      .hero-educator-sub {
+        font-size: 1rem;
+      }
+      .section-educator-cta h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="logo-wrap">
+      <a href="/" class="logo">cohli</a>
+      <span class="logo-sep">/</span>
+      <span class="logo-sub">Teach With Us</span>
+    </div>
+    <div class="nav-links">
+      <a href="#the-role">The Role</a>
+      <a href="#what-it-looks-like">A Day With Us</a>
+      <a href="#who-we-look-for">Who We Look For</a>
+      <a href="#apply" class="nav-cta">Apply to Teach</a>
+    </div>
+    <button class="mobile-menu" aria-label="Open menu">
+      <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mobileMenu">
+  <a href="#the-role">The Role</a>
+  <a href="#what-it-looks-like">A Day With Us</a>
+  <a href="#who-we-look-for">Who We Look For</a>
+  <a href="#apply" class="nav-cta">Apply to Teach</a>
+</div>
+
+<!-- HERO -->
+<section class="hero-educator">
+  <div class="hero-educator-content">
+    <h1>Teach in the Wild. Shape Young Minds Across the World.</h1>
+    <p class="hero-educator-sub">We're looking for educators who believe that the world is the best classroom. Join our team and facilitate learning experiences for children aged 1-10 in extraordinary places.</p>
+    <a href="#apply" class="hero-educator-cta">
+      Apply to Teach
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CONTEXT: WHAT IS COHLI -->
+<section class="context-section">
+  <div class="section-inner context-content" style="padding: 60px 24px;">
+    <div class="context-label fade-in">What We Do</div>
+    <h2 class="context-title fade-in">Coliving Cohorts for Traveling Families</h2>
+    <p class="context-text fade-in">Cohli brings together 8-12 families for 1-6 month coliving experiences in carefully selected properties around the world. Each cohort has a daily rhythm — and at the heart of it is the kids program. We call it <strong>Cohli Kids</strong>.</p>
+    <p class="context-text fade-in" style="margin-top: 16px;">Cohli Kids is not a school and it's not a curriculum. It's a <strong>capability-based learning framework</strong> — grounded in child development research, drawing from Montessori, Waldorf, Reggio Emilia, Forest School, and worldschooling — adapted for nomadic, multicultural, community-based family life. The goal is not to replicate traditional school, but to create an enriching environment inspired by play, creativity, and curiosity — integrating nature, art, movement, and project-based learning.</p>
+    <p class="context-text fade-in" style="margin-top: 16px;">Every educator who joins us shapes what this program becomes. Your knowledge, your experience, the specificities of each cohort and each location — it all feeds into what we're building. We want Cohli Kids to be something common and recognizable across cohorts, so kids know what to expect when they arrive, parents can trust the rhythm, and children who stay for multiple cohorts can have real continuity. At the same time, it needs to be adaptable — to the place, the group, and the educator who brings it to life. That balance is what we're working toward together.</p>
+  </div>
+</section>
+
+<!-- THE ROLE -->
+<section class="section" id="the-role">
+  <div class="section-inner">
+    <div class="section-label fade-in">The Role</div>
+    <h2 class="section-title fade-in">Two Paths, One Mission</h2>
+    <p class="section-desc fade-in">Whether you're a seasoned educator or a passionate caregiver, there's a place for you at Cohli. Both roles are essential to creating the learning environment our families trust.</p>
+
+    <div class="role-grid">
+      <!-- LEAD TEACHER -->
+      <div class="role-card fade-in">
+        <h3 class="role-card-title">Lead Educator</h3>
+        <ul class="role-card-points">
+          <li class="role-card-point">You design and facilitate a daily learning rhythm for children ages 1-10 (approximately 14-18 kids per cohort)</li>
+          <li class="role-card-point">You guide the overall vision — integrating nature, art, movement, and project-based learning — while adapting activities to mixed ages and cultures</li>
+          <li class="role-card-point">You draw from methods like Montessori, Waldorf, Reggio Emilia, or worldschooling — bringing your own philosophy while working within the Cohli Kids framework</li>
+          <li class="role-card-point">You work closely with Cohli's on-site facilitator and the families, and if needed, help source or mentor assistant educators</li>
+          <li class="role-card-point">Your contributions — what works, what you learn, what you adapt — feed directly into the evolving Cohli Kids program that carries across cohorts</li>
+        </ul>
+        <div class="role-card-meta">
+          <div class="role-meta-item"><span class="role-meta-label">Duration:</span> 1-6 months per cohort</div>
+          <div class="role-meta-item"><span class="role-meta-label">Compensation:</span> Stipend + accommodation + meals (details discussed during interview)</div>
+        </div>
+      </div>
+
+      <!-- ASSISTANT TEACHER -->
+      <div class="role-card fade-in">
+        <h3 class="role-card-title">Assistant Teacher</h3>
+        <ul class="role-card-points">
+          <li class="role-card-point">You support the lead teacher in daily activities and care</li>
+          <li class="role-card-point">You help with logistics, supervision, and creating a safe environment</li>
+          <li class="role-card-point">You're often a traveler yourself — looking for a meaningful way to contribute while exploring</li>
+          <li class="role-card-point">Great for early-career educators, gap year participants, or experienced caregivers</li>
+        </ul>
+        <div class="role-card-meta">
+          <div class="role-meta-item"><span class="role-meta-label">Duration:</span> Flexible (minimum 1 month)</div>
+          <div class="role-meta-item"><span class="role-meta-label">Compensation:</span> Accommodation + meals + small stipend (details discussed during interview)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A DAY WITH US -->
+<section class="section" id="what-it-looks-like" style="background:white;">
+  <div class="section-inner">
+    <div class="section-label fade-in">A Day With Us</div>
+    <h2 class="section-title fade-in">What Teaching With Cohli Looks Like</h2>
+
+    <div class="timeline fade-in">
+      <div class="timeline-item">
+        <div class="timeline-time">8:00 am</div>
+        <div class="timeline-content"><strong>Breakfast with the community</strong> — Start the day together. Coffee for you, milk for the kids, and real conversation at the table.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9:00 am</div>
+        <div class="timeline-content"><strong>Morning circle with the kids</strong> — Set intentions, share stories, build connections. Everyone has a voice.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9:30 am</div>
+        <div class="timeline-content"><strong>Structured learning time</strong> — Project-based, theme-driven, outdoors when possible. Language, nature, math, art — all woven into real exploration.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">11:00 am</div>
+        <div class="timeline-content"><strong>Creative exploration</strong> — Art, music, nature walks, local culture. Kids follow their curiosity. You facilitate and observe.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:00 pm</div>
+        <div class="timeline-content"><strong>Lunch together</strong> — Community meal. A time to refuel and debrief.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">1:00 pm</div>
+        <div class="timeline-content"><strong>Quiet time / free play</strong> — Kids rest or play freely. Your break too. You need it.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">3:00 pm</div>
+        <div class="timeline-content"><strong>Afternoon activities</strong> — Sports, crafts, community projects, skill-building. Intentional but flexible.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">4:00 pm</div>
+        <div class="timeline-content"><strong>Day wraps up</strong> — Kids return to families. You transition into evening.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Evening</div>
+        <div class="timeline-content"><strong>Your time</strong> — Explore the location, rest, connect with the community, prepare for tomorrow. You're part of this too.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE LOOK FOR -->
+<section class="section" id="who-we-look-for">
+  <div class="section-inner">
+    <div class="section-label fade-in">Who We Look For</div>
+    <h2 class="section-title fade-in">It's About Who You Are, Not Just What You've Done</h2>
+    <p class="section-desc fade-in">We believe the best educators bring curiosity, humanity, and a willingness to grow. Here's what matters to us.</p>
+
+    <div class="traits-grid">
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Experience with early childhood or primary education</h3>
+        <p class="trait-desc">You've worked with young children before — whether in a classroom, a forest school, a homeschool co-op, or something entirely your own. You understand how children develop and how to meet them where they are.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Comfortable with mixed ages and flexible settings</h3>
+        <p class="trait-desc">You thrive in environments that aren't fully structured. You can hold a group of 1-to-10-year-olds in one space, adapt on the fly, and build the plane while flying it. Traditional classrooms are not what we do.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Open to co-creation</h3>
+        <p class="trait-desc">You draw from methods like Montessori, Waldorf, Reggio Emilia, or worldschooling — and you're open to blending them. You co-create with families and assistants, and you're excited to contribute to a program that's bigger than any single cohort.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Passionate about nature, creativity, and community life</h3>
+        <p class="trait-desc">The world is your classroom. You see a beach walk as a science lesson, a market visit as cultural immersion, and a rainy afternoon as an invitation for storytelling. You care about kids as people, not just students.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE COHLI KIDS FRAMEWORK -->
+<section class="section" style="background:white;">
+  <div class="section-inner">
+    <div class="section-label fade-in">The Framework</div>
+    <h2 class="section-title fade-in">What You're Building Into</h2>
+    <p class="section-desc fade-in">Cohli Kids is grounded in seven pillars. You don't need to master all of them — but everything we do maps back to this shared foundation. It's what gives kids continuity across cohorts, even when the location, the group, and the educator change.</p>
+
+    <div class="traits-grid" style="margin-top: 32px;">
+      <div class="trait-card fade-in" style="border-left: 3px solid var(--terracotta);">
+        <h3 class="trait-title">Inner Foundations</h3>
+        <p class="trait-desc">Emotional regulation, self-awareness, and belonging. Daily check-ins, calm corners, predictable rhythms.</p>
+      </div>
+      <div class="trait-card fade-in" style="border-left: 3px solid var(--sage);">
+        <h3 class="trait-title">Nature Intelligence</h3>
+        <p class="trait-desc">Ecological awareness and resilience outdoors. Nature journaling, sit spots, risk competence, stewardship.</p>
+      </div>
+      <div class="trait-card fade-in" style="border-left: 3px solid var(--ochre);">
+        <h3 class="trait-title">Creativity & Making</h3>
+        <p class="trait-desc">Imagination and expression through open-ended materials, storytelling circles, music, and collaborative art.</p>
+      </div>
+      <div class="trait-card fade-in" style="border-left: 3px solid var(--sky);">
+        <h3 class="trait-title">Inquiry & Real-World Learning</h3>
+        <p class="trait-desc">Curiosity-driven exploration anchored in real places. Kids choose questions, do fieldwork, document discoveries.</p>
+      </div>
+      <div class="trait-card fade-in" style="border-left: 3px solid var(--mauve);">
+        <h3 class="trait-title">Global Citizenship</h3>
+        <p class="trait-desc">Cultural fluency through local language, cross-cultural rituals, and age-appropriate service-learning.</p>
+      </div>
+      <div class="trait-card fade-in" style="border-left: 3px solid var(--apricot);">
+        <h3 class="trait-title">Practical Life & Contribution</h3>
+        <p class="trait-desc">Independence through doing — pouring, chopping, tidying, contributing. Kids are part of the community, not separate from it.</p>
+      </div>
+    </div>
+
+    <p class="section-desc fade-in" style="margin-top: 40px; text-align: center; max-width: 720px; margin-left: auto; margin-right: auto; font-style: italic; color: var(--stone);">Each educator brings their own lens to these pillars. What you learn, adapt, and create feeds back into the program — so the next educator, and the next cohort, can build on what came before.</p>
+  </div>
+</section>
+
+<!-- WHERE YOU COULD TEACH -->
+<section class="section" style="background:var(--alabaster); text-align:center;">
+  <div class="section-inner">
+    <div class="section-label fade-in">Where You Could Teach</div>
+    <h2 class="section-title fade-in">From the Mountains to the Coast</h2>
+    <p class="section-desc fade-in" style="margin-left:auto; margin-right:auto;">Each cohort is in a different location. You could be teaching by the ocean in Portugal one season and in the cloud forests of Colombia the next.</p>
+
+    <div class="location-pills fade-in">
+      <div class="location-pill">Portugal</div>
+      <div class="location-pill">Colombia</div>
+      <div class="location-pill">Costa Rica</div>
+      <div class="location-pill">Japan</div>
+      <div class="location-pill">Mexico</div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST SECTION -->
+<section class="section section-honest">
+  <div class="section-inner">
+    <div class="section-label fade-in" style="color:white;">The Real Talk</div>
+    <h2 class="section-title fade-in">What We're Honest About</h2>
+    <p class="section-desc fade-in">This role is not for everyone. Here's what you should know before you apply.</p>
+
+    <div class="honest-grid">
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">This isn't a vacation</h3>
+        <p class="honest-card-text">You're working. The days are full, the kids have energy, and the unexpected is daily. You'll be tired. And it'll be worth it.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">It's not a traditional school</h3>
+        <p class="honest-card-text">No curriculum mandates, no standardized tests. You bring structure, but the world is the syllabus. That's the freedom — and the responsibility.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">Community living has friction</h3>
+        <p class="honest-card-text">You'll live alongside families. That's beautiful and sometimes challenging. Boundaries matter. Communication matters.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">We're still figuring it out</h3>
+        <p class="honest-card-text">Cohli is young. We iterate, we adapt, and we value educators who help us get better. Your feedback shapes what we become.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / APPLY SECTION -->
+<section class="section-educator-cta" id="apply">
+  <div class="section-educator-cta-inner fade-in">
+    <h2>Ready to Teach Differently?</h2>
+    <p>Tell us about yourself — your experience, your philosophy, and what draws you to this. We'll reach out if there's a fit.</p>
+    <a href="#" class="btn-white">Apply to Teach</a>
+    <div class="section-educator-cta-email">
+      Questions? Email us at <a href="mailto:welcome@cohli.com">welcome@cohli.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <a href="/" class="logo" style="color:white; font-family:var(--font-headline); font-size:1.4rem; text-decoration:none;">cohli</a>
+      <p style="font-size:.85rem; margin-top:8px; max-width:240px;">Belonging that travels.<br>Community without compromise.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="/#cohorts">Upcoming Cohorts</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#story">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <a href="#">The Village Post</a>
+      <a href="https://instagram.com/heycohli" rel="noopener" target="_blank">Instagram</a>
+    </div>
+    <div class="footer-col">
+      <h4>Work With Us</h4>
+      <a href="/partner.html">Partner With Us</a>
+      <a href="/educator.html">Teach With Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Cohli LLC. All rights reserved. | <a href="#" style="color:rgba(255,255,255,.5);">Privacy</a> | <a href="#" style="color:rgba(255,255,255,.5);">Terms</a>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/js/main.js"></script>
+
+</body>
+</html>

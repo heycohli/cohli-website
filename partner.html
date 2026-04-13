@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner With Us - Cohli | Host Family Coliving Cohorts</title>
+  <meta name="description" content="Become a Cohli partner and host vetted traveling families. Consistent occupancy, community support, and dedicated facilitation for your property.">
+  <meta name="keywords" content="property partnership, coliving host, family accommodations, short-term rental, community living">
+  <link rel="canonical" href="https://cohli.com/partner.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Partner With Us - Cohli">
+  <meta property="og:description" content="Host curated family coliving cohorts. Consistent occupancy, vetted families, and dedicated support.">
+  <meta property="og:url" content="https://cohli.com/partner.html">
+  <meta property="og:image" content="https://cohli.com/img/partner/og-image.jpg">
+  <meta property="og:site_name" content="Cohli">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#b46b52">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+
+  <style>
+    /* ========================================
+       PARTNER PAGE SPECIFIC STYLES
+       ======================================== */
+
+    /* Hero Section */
+    .partner-hero {
+      background: linear-gradient(135deg, var(--terracotta) 0%, var(--ember) 50%, var(--ochre) 100%);
+      color: white;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .partner-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255,255,255,.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .partner-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0; width: 600px; height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .partner-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .partner-hero h1 {
+      font-family: var(--font-headline);
+      font-size: 3.2rem;
+      font-weight: 900;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .partner-hero-sub {
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      opacity: .95;
+      line-height: 1.6;
+    }
+    .partner-hero .btn-white {
+      margin: 0 auto;
+      display: inline-block;
+    }
+
+    /* Opportunity Section (3-card grid) */
+    .opportunity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-bottom: 0;
+    }
+    .opp-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 40px 28px;
+      text-align: center;
+      border: 1px solid var(--clay);
+      transition: var(--ease-slow);
+      position: relative;
+    }
+    .opp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 60%; height: 4px;
+      background: linear-gradient(90deg, transparent 0%, var(--terracotta) 50%, transparent 100%);
+      border-radius: 2px;
+    }
+    .opp-card:hover {
+      border-color: var(--terracotta);
+      box-shadow: 0 8px 24px rgba(180,107,82,.1);
+    }
+    .opp-card-stat {
+      font-family: var(--font-headline);
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--terracotta);
+      margin-bottom: 8px;
+    }
+    .opp-card-label {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .opp-card-desc {
+      font-size: .9rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+
+    /* Who We Are Section */
+    .who-we-are-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
+      margin-top: 32px;
+    }
+    .stat-box {
+      text-align: center;
+    }
+    .stat-number {
+      font-family: var(--font-headline);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--terracotta);
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: .9rem;
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    /* How It Works Section */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .step-card {
+      background: linear-gradient(135deg, var(--alabaster) 0%, var(--clay) 100%);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      text-align: center;
+      border: 1px solid var(--driftwood);
+      position: relative;
+    }
+    .step-number {
+      position: absolute;
+      top: 16px; right: 20px;
+      width: 48px; height: 48px;
+      background: var(--terracotta);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.3rem;
+      font-family: var(--font-headline);
+    }
+    .step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+      margin-top: 8px;
+    }
+    .step-desc {
+      font-size: .85rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+
+    /* What You Get Section */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 48px;
+    }
+    .column-box {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 40px;
+      border: 1px solid var(--clay);
+    }
+    .column-box h3 {
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .column-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .column-box li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: .95rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+    .column-box li::before {
+      content: '✓';
+      color: var(--terracotta);
+      font-weight: 900;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Locations Section */
+    .locations-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+      justify-content: center;
+    }
+    .location-pill {
+      background: var(--alabaster);
+      border: 1.5px solid var(--driftwood);
+      color: var(--dark);
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      font-size: .9rem;
+      font-weight: 500;
+      transition: var(--ease);
+    }
+    .location-pill:hover {
+      background: var(--terracotta);
+      color: white;
+      border-color: var(--terracotta);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--terracotta) 0%, var(--ember) 100%);
+      color: white;
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,255,255,.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .cta-section h2 {
+      font-family: var(--font-headline);
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+      opacity: .95;
+      line-height: 1.7;
+    }
+    .cta-section .btn-white {
+      margin: 0 auto 24px;
+      display: inline-block;
+    }
+    .cta-email {
+      font-size: .9rem;
+      opacity: .85;
+    }
+    .cta-email a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(255,255,255,.4);
+      transition: var(--ease);
+    }
+    .cta-email a:hover {
+      border-bottom-color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .partner-hero h1 {
+        font-size: 2.4rem;
+      }
+      .two-column {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .column-box {
+        padding: 32px;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .partner-hero {
+        padding: 80px 20px 60px;
+      }
+      .partner-hero h1 {
+        font-size: 1.8rem;
+      }
+      .partner-hero-sub {
+        font-size: 1rem;
+      }
+      .opportunity-grid {
+        gap: 20px;
+      }
+      .opp-card {
+        padding: 28px 20px;
+      }
+      .opp-card-stat {
+        font-size: 2rem;
+      }
+      .who-we-are-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .locations-pills {
+        justify-content: flex-start;
+      }
+      .cta-section {
+        padding: 60px 20px;
+      }
+      .cta-section h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="logo-wrap">
+      <a href="/" class="logo">cohli</a>
+      <span class="logo-sep">/</span>
+      <span class="logo-sub">Partner With Us</span>
+    </div>
+    <div class="nav-links">
+      <a href="#why-cohli">Why Cohli</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#what-you-get">What You Get</a>
+      <a href="#interest-form" class="nav-cta">Start a Conversation</a>
+    </div>
+    <button class="mobile-menu" aria-label="Open menu">
+      <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mobileMenu">
+  <a href="#why-cohli">Why Cohli</a>
+  <a href="#how-it-works">How It Works</a>
+  <a href="#what-you-get">What You Get</a>
+  <a href="#interest-form" class="nav-cta">Start a Conversation</a>
+</div>
+
+<!-- HERO SECTION -->
+<section class="partner-hero">
+  <div class="partner-hero-content fade-in">
+    <h1>Your Property. Our Families. A Shared Vision.</h1>
+    <p class="partner-hero-sub">We bring vetted, values-aligned traveling families to extraordinary properties worldwide. You provide the space — we handle the rest.</p>
+    <a href="#interest-form" class="btn-white">Start a Conversation</a>
+  </div>
+</section>
+
+<!-- THE OPPORTUNITY SECTION -->
+<section class="section" id="why-cohli">
+  <div class="section-inner">
+    <div class="section-label fade-in">The Opportunity</div>
+    <h2 class="section-title fade-in">A Growing Movement of Families Who Travel Differently</h2>
+    <p class="section-desc fade-in">Traveling families are looking for more than hotels and short-term rentals. They want community, structure, and a place to truly settle in — for 1 to 6 months at a time.</p>
+
+    <div class="opportunity-grid">
+      <div class="opp-card fade-in fade-in-delay-1">
+        <div class="opp-card-stat">$1.35T</div>
+        <div class="opp-card-label">Family Travel Market</div>
+        <div class="opp-card-desc">Global family tour market in 2024, projected to reach $2T+ by 2033</div>
+      </div>
+      <div class="opp-card fade-in fade-in-delay-2">
+        <div class="opp-card-stat">3M+</div>
+        <div class="opp-card-label">Homeschooling Families</div>
+        <div class="opp-card-desc">In the US alone — with worldschooling as the fastest-growing segment</div>
+      </div>
+      <div class="opp-card fade-in fade-in-delay-3">
+        <div class="opp-card-stat">85%</div>
+        <div class="opp-card-label">Plan to Travel</div>
+        <div class="opp-card-desc">Of families planning to travel with children in the next 12 months</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE SECTION -->
+<section class="section" style="background: var(--alabaster);">
+  <div class="section-inner">
+    <div class="section-label fade-in">Who We Are</div>
+    <h2 class="section-title fade-in">We're Cohli — And We've Done This Before</h2>
+
+    <div class="who-we-are-stats">
+      <div class="stat-box fade-in">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Locations Worldwide</div>
+      </div>
+      <div class="stat-box fade-in fade-in-delay-1">
+        <div class="stat-number">31</div>
+        <div class="stat-label">Founding Families</div>
+      </div>
+      <div class="stat-box fade-in fade-in-delay-2">
+        <div class="stat-number">1,500+</div>
+        <div class="stat-label">Community Members</div>
+      </div>
+      <div class="stat-box fade-in fade-in-delay-3">
+        <div class="stat-number">51%</div>
+        <div class="stat-label">Newsletter Open Rate</div>
+      </div>
+    </div>
+
+    <p class="section-desc fade-in" style="margin-top: 40px; text-align: center;">Cohli curates coliving cohorts for traveling families — 8-12 families per cohort, with a shared rhythm of daily life, kids programming, and community. We handle curation, communication, payment collection, and on-the-ground facilitation.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+<section class="section" id="how-it-works">
+  <div class="section-inner">
+    <div class="section-label fade-in">How It Works</div>
+    <h2 class="section-title fade-in">Five Steps to Your First Cohort</h2>
+
+    <div class="steps-grid">
+      <div class="step-card fade-in">
+        <div class="step-number">1</div>
+        <div class="step-title">Discovery Call</div>
+        <div class="step-desc">We learn about your property, capacity, and vision.</div>
+      </div>
+      <div class="step-card fade-in fade-in-delay-1">
+        <div class="step-number">2</div>
+        <div class="step-title">Alignment</div>
+        <div class="step-desc">We agree on dates, pricing model, and expectations.</div>
+      </div>
+      <div class="step-card fade-in fade-in-delay-2">
+        <div class="step-number">3</div>
+        <div class="step-title">Curation</div>
+        <div class="step-desc">We market to our community and vet every family.</div>
+      </div>
+      <div class="step-card fade-in fade-in-delay-3">
+        <div class="step-number">4</div>
+        <div class="step-title">Facilitation</div>
+        <div class="step-desc">Our team handles daily rhythm, kids program, and community management.</div>
+      </div>
+      <div class="step-card fade-in">
+        <div class="step-number">5</div>
+        <div class="step-title">Review</div>
+        <div class="step-desc">Post-cohort debrief and decision on continuing.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET SECTION -->
+<section class="section" id="what-you-get" style="background: var(--alabaster);">
+  <div class="section-inner">
+    <div class="section-label fade-in">For Property Partners</div>
+    <h2 class="section-title fade-in">What You Get vs What We Handle</h2>
+
+    <div class="two-column">
+      <div class="column-box fade-in">
+        <h3>
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--terracotta);">
+            <path stroke-linecap="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          What You Get
+        </h3>
+        <ul>
+          <li>Consistent occupancy (1-6 months)</li>
+          <li>Vetted families who respect your space</li>
+          <li>A dedicated Cohli facilitator on-site</li>
+          <li>Marketing to our engaged community</li>
+          <li>Simple, clear partnership agreement</li>
+          <li>Post-cohort property reviews</li>
+        </ul>
+      </div>
+
+      <div class="column-box fade-in fade-in-delay-1">
+        <h3>
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color: var(--terracotta);">
+            <path stroke-linecap="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          What Cohli Handles
+        </h3>
+        <ul>
+          <li>Family vetting and curation</li>
+          <li>Payment collection and admin</li>
+          <li>On-site facilitation and daily rhythm</li>
+          <li>Kids programming (education + activities)</li>
+          <li>Community management</li>
+          <li>Conflict resolution and family support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE WE OPERATE -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label fade-in">Where We Operate</div>
+    <h2 class="section-title fade-in">From the Mountains to the Coast</h2>
+    <p class="section-desc fade-in">We've hosted cohorts across Latin America, Europe, and beyond. We're always looking for the next place that feels right.</p>
+
+    <div class="locations-pills">
+      <span class="location-pill fade-in">Portugal</span>
+      <span class="location-pill fade-in fade-in-delay-1">Colombia</span>
+      <span class="location-pill fade-in fade-in-delay-2">Costa Rica</span>
+      <span class="location-pill fade-in fade-in-delay-3">Japan</span>
+      <span class="location-pill fade-in">Mexico</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / INTEREST FORM SECTION -->
+<section class="cta-section" id="interest-form">
+  <div class="cta-content fade-in">
+    <h2>Let's Explore This Together</h2>
+    <p>Tell us about your property and we'll set up a conversation. No commitment — just a chance to see if there's alignment.</p>
+    <a href="#" class="btn-white">Start a Conversation</a>
+    <div class="cta-email">
+      Or email us directly at <a href="mailto:welcome@cohli.com">welcome@cohli.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <a href="/" class="logo" style="color:white; font-family:var(--font-headline); font-size:1.4rem; text-decoration:none;">cohli</a>
+      <p style="font-size:.85rem; margin-top:8px; max-width:240px;">Belonging that travels.<br>Community without compromise.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="/#cohorts">Upcoming Cohorts</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#story">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <a href="#">The Village Post</a>
+      <a href="https://instagram.com/heycohli" rel="noopener" target="_blank">Instagram</a>
+    </div>
+    <div class="footer-col">
+      <h4>Work With Us</h4>
+      <a href="/partner.html">Partner With Us</a>
+      <a href="/educator.html">Teach With Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Cohli LLC. All rights reserved. | <a href="#" style="color:rgba(255,255,255,.5);">Privacy</a> | <a href="#" style="color:rgba(255,255,255,.5);">Terms</a>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/js/main.js"></script>
+
+<script>
+  // Scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+  }
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>
