@@ -6,3 +6,7 @@ https://www.cohli.com/* https://cohli.com/:splat 301
 
 # Old Nomad Nest URLs (if any traffic comes from old links)
 /nomad-nest/* / 301
+
+# Craveiral renamed to Alentejo Eco-Farm (contractual: can't use Craveiral name)
+/cohorts/craveiral.html /cohorts/alentejo-eco-farm.html 301
+/cohorts/craveiral /cohorts/alentejo-eco-farm.html 301
