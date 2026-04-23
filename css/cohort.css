@@ -140,6 +140,25 @@
 .day-content h4 { font-size: .95rem; margin-bottom: 2px; }
 .day-content p { font-size: .85rem; color: var(--stone); }
 
+/* === UNIFIED TIMELINE (matches homepage style, used on cohort pages too) === */
+.timeline { max-width: 700px; margin: 0 auto; position: relative; padding-left: 40px; }
+.timeline::before {
+  content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(to bottom, var(--terracotta), var(--sage), var(--sky, var(--ochre)), var(--ember, var(--terracotta)));
+}
+.timeline-item {
+  position: relative; margin-bottom: 24px; padding: 16px 20px;
+  background: white; border-radius: var(--radius-sm); border: 1px solid var(--clay);
+}
+.timeline-item::before {
+  content: ''; position: absolute; left: -33px; top: 20px;
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid var(--terracotta); background: white;
+}
+.timeline-time { font-size: .8rem; font-weight: 700; color: var(--terracotta); text-transform: uppercase; letter-spacing: .5px; }
+.timeline-title { font-weight: 600; margin: 4px 0 2px; }
+.timeline-desc { font-size: .85rem; color: var(--stone); }
+
 /* === PRICING === */
 .pricing-section { background: white; }
 .pricing-box {
