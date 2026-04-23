@@ -36,28 +36,31 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Past/future cohort pages removed from sitemap for launch; also have noindex robots tag.
+       Re-enable when we're ready to open them to the public again. -->
+
   <url>
-    <loc>https://cohli.com/cohorts/kai.html</loc>
-    <lastmod>2026-04-22</lastmod>
+    <loc>https://cohli.com/facilitator.html</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cohli.com/cohorts/con-smania.html</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://cohli.com/roles/facilitator-casa-sumapaz-jun-2026.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cohli.com/cohorts/casa-de-mono.html</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://cohli.com/roles/educator-casa-sumapaz-jun-2026.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cohli.com/cohorts/onze.html</loc>
-    <lastmod>2026-04-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://cohli.com/roles/host-bali-2026.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

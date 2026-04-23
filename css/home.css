@@ -155,7 +155,7 @@
 .founder-text h3 { font-family: var(--font-headline); font-size: 1.6rem; margin-bottom: 16px; line-height: 1.3; }
 .founder-text p { color: var(--stone); margin-bottom: 14px; }
 .founder-img { display: flex; justify-content: center; align-items: center; }
-.founder-img img { width: 100%; max-width: 340px; height: auto; border-radius: 50%; box-shadow: 0 8px 32px rgba(67,49,40,.08); }
+.founder-img img { width: 100%; max-width: 220px; aspect-ratio: 1/1; height: auto; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 6px 24px rgba(67,49,40,.12); }
 
 /* === HONEST SECTION (earthy, grounded, not somber) === */
 .honest-section { background: var(--clay); color: var(--dark); position: relative; }

@@ -1,381 +1,115 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facilitador/a — Casa Sumapaz 2026 | Cohli</title>
-  <meta name="description" content="Cohli busca un/a Facilitador/a para nuestra residencia en Casa Sumapaz, Colombia. 30 de junio – 30 de julio, 2026. Dos formas de participar: Familia Facilitadora o Residencia de Facilitación.">
-  <meta name="keywords" content="facilitator, coliving, community facilitator, Casa Sumapaz, Colombia, nomadic families, worldschooling, intentional community">
+  <title>Facilitate with Cohli — Hold the heart of a family cohort</title>
+  <meta name="description" content="Facilitate a Cohli cohort. Hold the social, emotional, and cultural container for 6–8 traveling families over 4 weeks. Current openings + how we work.">
+  <meta name="keywords" content="cohli facilitator, community facilitator, coliving facilitator, family cohort, intentional community, worldschooling">
   <link rel="canonical" href="https://cohli.com/facilitator.html">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Cohli busca Facilitador/a — Casa Sumapaz 2026">
-  <meta property="og:description" content="Sostienes el contenedor social y emocional de 6–8 familias durante 4 semanas en las montañas de Colombia. Dos formas de participar.">
+  <meta property="og:title" content="Facilitate with Cohli">
+  <meta property="og:description" content="Hold the heart of a family cohort. Current openings + how we work.">
   <meta property="og:url" content="https://cohli.com/facilitator.html">
-  <meta property="og:image" content="https://cohli.com/img/casa-sumapaz/gallery-01.jpg">
+  <meta property="og:image" content="https://cohli.com/img/home/og-image.jpg">
   <meta property="og:site_name" content="Cohli">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#b46b52">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/home.css">
 
-  <style>
-    /* ═══════════════════════════════════════════
-       FACILITATOR PAGE STYLES
-       ═══════════════════════════════════════════ */
-
-    /* Hero with background image */
-    .hero-facilitator {
-      min-height: 80vh;
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-      padding: 140px 24px 80px;
-      text-align: center; color: white;
-    }
-    .hero-facilitator-bg {
-      position: absolute; inset: 0; z-index: 0;
-      background-image: url('/img/casa-sumapaz/gallery-01.jpg');
-      background-size: cover; background-position: center;
-    }
-    .hero-facilitator-bg::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg,
-        rgba(42,42,42,.3) 0%,
-        rgba(180,107,82,.6) 40%,
-        rgba(180,107,82,.88) 70%,
-        var(--terracotta) 100%);
-    }
-    .hero-facilitator-content {
-      max-width: 800px; margin: 0 auto;
-      position: relative; z-index: 2;
-    }
-    .hero-facilitator h1 {
-      font-family: var(--font-headline);
-      font-size: 3.2rem; font-weight: 900;
-      margin-bottom: 20px; line-height: 1.15; color: white;
-    }
-    .hero-facilitator-sub {
-      font-size: 1.15rem; color: rgba(255,255,255,.95);
-      margin-bottom: 12px; line-height: 1.6; font-weight: 300;
-    }
-    .hero-facilitator-meta {
-      font-size: .9rem; color: rgba(255,255,255,.7);
-      margin-bottom: 36px; font-weight: 500;
-      letter-spacing: .5px;
-    }
-    .hero-facilitator-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: white; color: var(--terracotta);
-      padding: 16px 40px; border-radius: var(--radius-pill);
-      font-weight: 700; text-decoration: none;
-      transition: var(--ease); font-size: 1.05rem;
-    }
-    .hero-facilitator-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,.25);
-    }
-
-    /* Gallery strip */
-    .gallery-strip {
-      display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px;
-      overflow: hidden;
-    }
-    .gallery-strip img {
-      width: 100%; height: 160px; object-fit: cover;
-      transition: var(--ease-slow);
-    }
-    .gallery-strip img:hover {
-      transform: scale(1.05); filter: brightness(1.05);
-    }
-
-    /* Context section */
-    .context-section { background: white; border-bottom: 1px solid var(--clay); }
-    .context-content { max-width: 800px; margin: 0 auto; }
-    .context-text {
-      font-size: .95rem; color: var(--stone);
-      line-height: 1.8; margin-bottom: 16px;
-    }
-
-    /* Language toggle */
-    .lang-toggle {
-      display: flex; justify-content: center; gap: 8px;
-      padding: 20px 24px; background: white; border-bottom: 1px solid var(--clay);
-      position: sticky; top: 72px; z-index: 100;
-    }
-    .lang-btn {
-      padding: 8px 20px; border-radius: var(--radius-pill);
-      font-size: .85rem; font-weight: 600; cursor: pointer;
-      border: 1.5px solid var(--driftwood); background: transparent;
-      color: var(--stone); transition: var(--ease);
-      font-family: var(--font-body);
-    }
-    .lang-btn.active {
-      background: var(--terracotta); color: white;
-      border-color: var(--terracotta);
-    }
-    .lang-btn:hover:not(.active) {
-      border-color: var(--terracotta); color: var(--terracotta);
-    }
-
-    .lang-section { display: none; }
-    .lang-section.active { display: block; }
-
-    /* Role cards */
-    .role-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px; margin-top: 48px;
-    }
-    .role-card {
-      background: white; padding: 40px 32px;
-      border-radius: var(--radius-md); border: 2px solid var(--clay);
-      transition: var(--ease-slow); position: relative;
-    }
-    .role-card:hover {
-      border-color: var(--terracotta);
-      box-shadow: 0 8px 32px rgba(180,107,82,.12);
-      transform: translateY(-4px);
-    }
-    .role-card.preferred { border-color: var(--terracotta); }
-    .role-card-badge {
-      position: absolute; top: -12px; right: 20px;
-      background: var(--terracotta); color: white;
-      font-size: .7rem; font-weight: 700;
-      padding: 4px 14px; border-radius: 20px;
-      letter-spacing: .5px; text-transform: uppercase;
-    }
-    .role-card-title {
-      font-family: var(--font-headline); font-size: 1.6rem;
-      font-weight: 900; color: var(--dark); margin-bottom: 16px;
-    }
-    .role-card-desc {
-      font-size: .95rem; color: var(--stone);
-      line-height: 1.7; margin-bottom: 20px;
-    }
-    .role-card-exchange {
-      padding: 16px; background: rgba(180,107,82,.05);
-      border-radius: var(--radius-sm); border-left: 3px solid var(--terracotta);
-      font-size: .9rem; color: var(--dark); line-height: 1.6;
-      margin-bottom: 16px;
-    }
-    .role-card-exchange strong { font-weight: 700; }
-    .role-card-note {
-      font-size: .85rem; color: var(--stone); font-style: italic;
-      line-height: 1.5;
-    }
-
-    /* Responsibilities list */
-    .resp-list { list-style: none; margin: 0 0 20px; }
-    .resp-list li {
-      padding-left: 24px; margin-bottom: 14px;
-      position: relative; font-size: .95rem;
-      color: var(--stone); line-height: 1.6;
-    }
-    .resp-list li::before {
-      content: '→'; position: absolute; left: 0;
-      color: var(--terracotta); font-weight: 900;
-    }
-
-    /* Details grid */
-    .details-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px; margin-top: 40px;
-    }
-    .detail-card {
-      padding: 24px; background: white;
-      border-radius: var(--radius-md); border: 1px solid var(--clay);
-    }
-    .detail-label {
-      font-size: .7rem; text-transform: uppercase;
-      letter-spacing: 1.5px; font-weight: 600;
-      color: var(--terracotta); margin-bottom: 6px;
-    }
-    .detail-value {
-      font-size: .95rem; color: var(--dark);
-      line-height: 1.5; font-weight: 500;
-    }
-
-    /* Traits grid */
-    .traits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px; margin-top: 48px;
-    }
-    .trait-card {
-      background: white; padding: 32px;
-      border-radius: var(--radius-md); border: 1px solid var(--clay);
-      transition: var(--ease-slow);
-    }
-    .trait-card:hover {
-      border-color: var(--terracotta);
-      background: linear-gradient(135deg, rgba(180,107,82,.02) 0%, transparent 100%);
-      transform: translateY(-2px);
-    }
-    .trait-title {
-      font-family: var(--font-headline); font-size: 1.15rem;
-      font-weight: 700; color: var(--dark); margin-bottom: 12px;
-    }
-    .trait-desc {
-      font-size: .9rem; color: var(--stone); line-height: 1.6;
-    }
-
-    /* Receive grid */
-    .receive-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px; margin-top: 40px;
-    }
-    .receive-card {
-      padding: 28px; background: white;
-      border-radius: var(--radius-md); border: 1px solid var(--clay);
-      display: flex; gap: 16px; align-items: flex-start;
-    }
-    .receive-icon {
-      font-size: 1.4rem; flex-shrink: 0; margin-top: 2px;
-    }
-    .receive-title {
-      font-weight: 700; color: var(--dark);
-      font-size: .95rem; margin-bottom: 4px;
-    }
-    .receive-text {
-      font-size: .85rem; color: var(--stone); line-height: 1.6;
-    }
-
-    /* Honest section */
-    .section-honest { background: var(--driftwood); color: white; }
-    .section-honest .section-title,
-    .section-honest .section-label { color: white; }
-    .section-honest .section-desc { color: rgba(255,255,255,.9); }
-    .honest-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px; margin-top: 40px;
-    }
-    .honest-card {
-      background: rgba(255,255,255,.1); padding: 32px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(255,255,255,.2);
-      backdrop-filter: blur(8px);
-    }
-    .honest-card-title {
-      font-family: var(--font-headline); font-size: 1.1rem;
-      font-weight: 700; color: white; margin-bottom: 12px;
-    }
-    .honest-card-text {
-      font-size: .9rem; color: rgba(255,255,255,.85); line-height: 1.6;
-    }
-
-    /* CTA section */
-    .section-facilitator-cta {
-      background: var(--terracotta); color: white;
-      padding: 80px 24px; text-align: center;
-    }
-    .section-facilitator-cta-inner { max-width: 700px; margin: 0 auto; }
-    .section-facilitator-cta h2 {
-      font-family: var(--font-headline); font-size: 2.4rem;
-      font-weight: 900; margin-bottom: 20px; line-height: 1.2; color: white;
-    }
-    .section-facilitator-cta p {
-      font-size: 1.05rem; color: rgba(255,255,255,.95);
-      margin-bottom: 32px; line-height: 1.6;
-    }
-    .section-facilitator-cta .btn-white { display: inline-block; margin-bottom: 24px; }
-    .section-facilitator-cta-email { font-size: .9rem; color: rgba(255,255,255,.8); }
-    .section-facilitator-cta-email a {
-      color: white; font-weight: 600; text-decoration: none; transition: var(--ease);
-    }
-    .section-facilitator-cta-email a:hover { opacity: .8; }
-    .section-facilitator-cta-timeline {
-      font-size: .85rem; color: rgba(255,255,255,.65);
-      font-style: italic; margin-top: 12px;
-    }
-
-    /* Quote */
-    .quote-block {
-      max-width: 700px; margin: 0 auto;
-      text-align: center; padding: 40px 0;
-    }
-    .quote-text {
-      font-family: var(--font-quote); font-size: 1.3rem;
-      font-style: italic; color: var(--terracotta);
-      line-height: 1.7; margin-bottom: 12px;
-    }
-    .quote-attr {
-      font-size: .85rem; color: var(--stone); font-weight: 500;
-    }
-
-    /* Footer override (matches educator page) */
-    footer {
-      background: var(--dark); color: white;
-      padding: 60px 24px 24px;
-    }
-    .footer-inner {
-      max-width: var(--max-width-wide); margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 40px; margin-bottom: 40px;
-    }
-    .footer-col h4 {
-      font-family: var(--font-body); font-size: .9rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 1px;
-      color: rgba(255,255,255,.7); margin-bottom: 16px;
-    }
-    .footer-col a {
-      display: block; color: rgba(255,255,255,.75);
-      text-decoration: none; font-size: .85rem;
-      margin-bottom: 12px; transition: var(--ease);
-    }
-    .footer-col a:hover { color: white; }
-    .footer-col p {
-      font-size: .85rem; color: rgba(255,255,255,.65); line-height: 1.6;
-    }
-    .footer-bottom {
-      max-width: var(--max-width-wide); margin: 0 auto;
-      padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1);
-      text-align: center; font-size: .8rem; color: rgba(255,255,255,.5);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-facilitator h1 { font-size: 2rem; }
-      .hero-facilitator { padding: 100px 24px 60px; min-height: 70vh; }
-      .section-facilitator-cta h2 { font-size: 1.8rem; }
-      .role-grid { grid-template-columns: 1fr; }
-      .gallery-strip img { height: 100px; }
-    }
-    @media (max-width: 480px) {
-      .hero-facilitator h1 { font-size: 1.6rem; }
-      .hero-facilitator-sub { font-size: 1rem; }
-      .gallery-strip { grid-template-columns: repeat(3, 1fr); }
-      .gallery-strip img:nth-child(4),
-      .gallery-strip img:nth-child(5) { display: none; }
-    }
-  </style>
   <link rel="icon" href="/img/brand/favicon.png" type="image/png">
   <link rel="icon" href="/img/brand/favicon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="/img/brand/apple-touch-icon.png">
+
+  <style>
+    /* PAGE-SPECIFIC STYLES */
+    .hero-fac {
+      background: linear-gradient(135deg, rgba(180,107,82,.85) 0%, rgba(201,142,48,.78) 100%),
+                  url('/img/casa-sumapaz/gallery-01.jpg') center/cover;
+      color: white;
+      padding: 140px 24px 90px;
+      text-align: center;
+    }
+    .hero-fac-inner { max-width: 760px; margin: 0 auto; }
+    .hero-fac .eyebrow { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; opacity: .85; margin-bottom: 14px; font-weight: 600; }
+    .hero-fac h1 { font-family: var(--font-headline); font-size: 2.6rem; line-height: 1.15; margin-bottom: 18px; }
+    .hero-fac p.lede { font-size: 1.15rem; opacity: .94; line-height: 1.55; max-width: 580px; margin: 0 auto 28px; }
+    .hero-fac .ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .hero-fac .btn-pri { background: white; color: var(--terracotta); padding: 14px 26px; border-radius: 999px; font-weight: 600; text-decoration: none; }
+    .hero-fac .btn-sec { border: 1.5px solid rgba(255,255,255,.85); color: white; padding: 14px 26px; border-radius: 999px; font-weight: 600; text-decoration: none; }
+    .hero-fac .btn-pri:hover { transform: translateY(-1px); }
+
+    /* What it means */
+    .what-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+    .what-card { background: white; border: 1px solid var(--clay); border-radius: 14px; padding: 28px 24px; }
+    .what-card .icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(180,107,82,.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 1.4rem; }
+    .what-card h3 { font-family: var(--font-headline); font-size: 1.15rem; margin-bottom: 8px; }
+    .what-card p { color: var(--stone); font-size: .94rem; line-height: 1.55; }
+
+    /* Two tracks */
+    .tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+    .track { background: var(--alabaster); border: 1px solid var(--clay); border-radius: 14px; padding: 30px; position: relative; }
+    .track.preferred { border: 2px solid var(--terracotta); background: white; }
+    .track-badge { position: absolute; top: -12px; left: 24px; background: var(--terracotta); color: white; padding: 4px 12px; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .track h3 { font-family: var(--font-headline); font-size: 1.35rem; margin-bottom: 10px; }
+    .track p { color: var(--stone); margin-bottom: 14px; line-height: 1.55; }
+    .track .exch { background: rgba(167,180,156,.12); border-left: 3px solid var(--sage); padding: 14px 16px; border-radius: 4px; font-size: .92rem; }
+    .track .exch strong { color: var(--dark); }
+
+    /* Openings */
+    .openings { background: linear-gradient(135deg, rgba(167,180,156,.08) 0%, rgba(180,107,82,.06) 100%); }
+    .opening-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 30px; }
+    .opening-card { display: grid; grid-template-columns: 220px 1fr auto; gap: 24px; align-items: center; background: white; border: 1px solid var(--clay); border-radius: 14px; padding: 22px; text-decoration: none; color: inherit; transition: all .2s ease; }
+    .opening-card:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(67,49,40,.08); border-color: var(--terracotta); }
+    .opening-img { height: 140px; border-radius: 10px; overflow: hidden; background: var(--clay); }
+    .opening-img img { width: 100%; height: 100%; object-fit: cover; }
+    .opening-meta { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--terracotta); font-weight: 700; margin-bottom: 6px; }
+    .opening-title { font-family: var(--font-headline); font-size: 1.35rem; margin-bottom: 8px; line-height: 1.25; }
+    .opening-desc { color: var(--stone); font-size: .92rem; line-height: 1.5; margin-bottom: 8px; }
+    .opening-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .opening-tag { background: var(--alabaster); border: 1px solid var(--clay); padding: 4px 10px; border-radius: 999px; font-size: .76rem; color: var(--stone); }
+    .opening-arrow { color: var(--terracotta); font-size: 1.5rem; padding: 0 8px; }
+
+    .opening-empty { text-align: center; padding: 48px 24px; background: white; border: 1px dashed var(--clay); border-radius: 14px; }
+    .opening-empty p { color: var(--stone); margin-bottom: 16px; }
+
+    /* Always-on pool */
+    .pool { background: var(--terracotta); color: white; padding: 80px 24px; text-align: center; }
+    .pool-inner { max-width: 680px; margin: 0 auto; }
+    .pool h2 { font-family: var(--font-headline); font-size: 2.1rem; margin-bottom: 16px; }
+    .pool p { opacity: .92; margin-bottom: 24px; line-height: 1.6; font-size: 1.05rem; }
+    .pool .btn-white { background: white; color: var(--terracotta); padding: 14px 28px; border-radius: 999px; font-weight: 600; text-decoration: none; display: inline-block; }
+    .pool .alt { display: block; margin-top: 14px; opacity: .85; font-size: .88rem; }
+    .pool .alt a { color: white; text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .hero-fac h1 { font-size: 2rem; }
+      .what-grid { grid-template-columns: 1fr; }
+      .tracks { grid-template-columns: 1fr; }
+      .opening-card { grid-template-columns: 1fr; }
+      .opening-img { height: 180px; }
+      .opening-arrow { display: none; }
+    }
+  </style>
 </head>
 <body>
 
 <!-- NAVIGATION -->
 <nav id="navbar">
   <div class="nav-inner">
-    <div class="logo-wrap">
-      <a href="/" class="logo">cohli</a>
-      <span class="logo-sep">/</span>
-      <span class="logo-sub">Facilitador/a</span>
-    </div>
+    <a href="/" class="logo">cohli</a>
     <div class="nav-links">
-      <a href="#el-rol">El Rol</a>
-      <a href="#participar">Cómo Participar</a>
-      <a href="#buscamos">A Quién Buscamos</a>
-      <a href="#apply" class="nav-cta">Postularme</a>
+      <a href="/#cohorts">Cohorts</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#story">Our Story</a>
+      <a href="/#community">Community</a>
+      <a href="#openings" class="nav-cta">See Openings</a>
     </div>
     <button class="mobile-menu" aria-label="Open menu">
       <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -383,460 +117,116 @@
   </div>
 </nav>
 <div class="mobile-overlay" id="mobileMenu">
-  <a href="#el-rol">El Rol</a>
-  <a href="#participar">Cómo Participar</a>
-  <a href="#buscamos">A Quién Buscamos</a>
-  <a href="#apply" class="nav-cta">Postularme</a>
+  <a href="/#cohorts">Cohorts</a>
+  <a href="/#how-it-works">How It Works</a>
+  <a href="/#story">Our Story</a>
+  <a href="/#community">Community</a>
+  <a href="#openings" class="nav-cta">See Openings</a>
 </div>
 
 <!-- HERO -->
-<section class="hero-facilitator">
-  <div class="hero-facilitator-bg"></div>
-  <div class="hero-facilitator-content">
-    <h1>Cohli busca Facilitador/a</h1>
-    <p class="hero-facilitator-sub">Sostienes el corazón de la comunidad. 6–8 familias. 4 semanas. Las montañas de Colombia.</p>
-    <p class="hero-facilitator-meta">Casa Sumapaz · Cundinamarca · 30 de junio – 30 de julio, 2026</p>
-    <a href="#apply" class="hero-facilitator-cta">
-      Postularme
-      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-  </div>
-</section>
-
-<!-- GALLERY STRIP -->
-<div class="gallery-strip gallery">
-  <img src="/img/casa-sumapaz/gallery-01.jpg" alt="Familias al atardecer" data-caption="Families at sunset — Casa Sumapaz" loading="lazy">
-  <img src="/img/casa-sumapaz/gallery-04.jpg" alt="Niños en el huerto" data-caption="Kids in the garden" loading="lazy">
-  <img src="/img/casa-sumapaz/gallery-02.jpg" alt="Jardín de bambú" data-caption="Bamboo garden" loading="lazy">
-  <img src="/img/casa-sumapaz/gallery-03.jpg" alt="Habitación" data-caption="Accommodation" loading="lazy">
-  <img src="/img/casa-sumapaz/gallery-05.jpg" alt="Frutas locales" data-caption="Local fruits" loading="lazy">
-</div>
-
-<!-- LANGUAGE TOGGLE -->
-<div class="lang-toggle">
-  <button class="lang-btn active" data-lang="es">Español</button>
-  <button class="lang-btn" data-lang="en">English</button>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════════
-     SPANISH VERSION
-     ═══════════════════════════════════════════════════════════ -->
-<div class="lang-section active" id="lang-es">
-
-<!-- CONTEXT -->
-<section class="context-section">
-  <div class="section-inner context-content" style="padding: 60px 24px;">
-    <div class="section-label fade-in">Sobre Cohli</div>
-    <p class="context-text fade-in">Cohli es una comunidad global de familias nómadas que co-crea experiencias de coliving y aprendizaje intencional alrededor del mundo. Este verano, realizamos nuestra segunda residencia en <strong>Casa Sumapaz</strong>, una propiedad espectacular en las montañas de Cundinamarca, Colombia — donde nuestra primera cohorte recibió un <strong>NPS de 9.77/10</strong>.</p>
-    <p class="context-text fade-in">Buscamos a alguien que sea el corazón de esta cohorte: el/la <strong>Facilitador/a</strong>.</p>
-  </div>
-</section>
-
-<!-- THE ROLE -->
-<section class="section" id="el-rol">
-  <div class="section-inner">
-    <div class="section-label fade-in">El Rol</div>
-    <h2 class="section-title fade-in">Facilitador/a de Comunidad</h2>
-    <p class="section-desc fade-in">Sostienes el contenedor social, emocional y cultural de 6–8 familias durante 4 semanas. No la logística (eso es operaciones), no la propiedad (eso es de los anfitriones), no la educación (eso es de los educadores). Tú sostienes a las personas.</p>
-
-    <ul class="resp-list fade-in">
-      <li>Facilitar el Círculo de Apertura, los Círculos de Padres semanales y la ceremonia de cierre.</li>
-      <li>Establecer el ritmo y la energía del grupo. Invitar a la co-creación, no a la pasividad.</li>
-      <li>Detectar tensiones temprano y guiar los conflictos hacia la reparación.</li>
-      <li>Integrar a las familias que llegan de manera intencional; proteger la estabilidad del grupo.</li>
-      <li>Check-in semanal con los fundadores de Cohli (remoto) sobre la salud comunitaria y logros.</li>
-    </ul>
-
-    <div class="quote-block fade-in">
-      <p class="quote-text">"No eres un/a monitor/a de campamento, ni terapeuta, ni gerente de hotel. Eres la persona que hace que 8 familias se sientan como una aldea."</p>
+<section class="hero-fac">
+  <div class="hero-fac-inner">
+    <div class="eyebrow">Facilitate With Cohli</div>
+    <h1>Hold the heart of a family cohort</h1>
+    <p class="lede">Facilitators are the people who keep the social and emotional rhythm of a Cohli cohort alive. Not staff. Not therapists. Not hotel managers. The person who helps 6–12 families feel like a village.</p>
+    <div class="ctas">
+      <a href="#openings" class="btn-pri">See current openings</a>
+      <a href="#how-we-work" class="btn-sec">How we work</a>
     </div>
   </div>
 </section>
 
-<!-- THE RESIDENCY -->
-<section class="section" style="background: white;">
+<!-- WHAT IT MEANS -->
+<section class="section" id="how-we-work">
   <div class="section-inner">
-    <div class="section-label fade-in">La Residencia</div>
-    <h2 class="section-title fade-in">Casa Sumapaz, Colombia</h2>
-    <p class="section-desc fade-in">Todo lo que necesitas saber sobre la experiencia.</p>
+    <div class="section-label">What facilitating with us means</div>
+    <h2 class="section-title">You hold the people, not the logistics.</h2>
+    <p class="section-desc">Operations are handled by our team. Property is held by our hosts. Education is held by educators. You hold something subtler — the container that lets everyone arrive, soften, and find each other.</p>
 
-    <div class="details-grid fade-in">
-      <div class="detail-card">
-        <div class="detail-label">Ubicación</div>
-        <div class="detail-value">Casa Sumapaz<br>Arbelaez, Cundinamarca</div>
+    <div class="what-grid">
+      <div class="what-card">
+        <div class="icon">🌀</div>
+        <h3>The rhythms</h3>
+        <p>Opening Circle, weekly Parent Circles, closing ceremony. The structure is designed — you bring it to life with presence and care.</p>
       </div>
-      <div class="detail-card">
-        <div class="detail-label">Fechas</div>
-        <div class="detail-value">30 de junio – 30 de julio<br>2026 (4 semanas)</div>
+      <div class="what-card">
+        <div class="icon">🪶</div>
+        <h3>The conflict + repair</h3>
+        <p>Tensions show up in any community. You catch them early, hold space honestly, and guide families toward repair rather than avoidance.</p>
       </div>
-      <div class="detail-card">
-        <div class="detail-label">Familias</div>
-        <div class="detail-value">6–8 confirmadas<br>(6 con depósito asegurado)</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Apoyo en Sitio</div>
-        <div class="detail-value">Clara y Sebastián, cocina,<br>limpieza, educadores</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Fundadores</div>
-        <div class="detail-value">Tiago y Lauren remotos<br>(video semanal + WhatsApp)</div>
+      <div class="what-card">
+        <div class="icon">🤝</div>
+        <h3>The belonging</h3>
+        <p>You make sure every family — including the quieter ones, the late arrivals, the families with hard weeks — feels seen and woven in.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TWO TRACKS -->
-<section class="section" id="participar">
-  <div class="section-inner">
-    <div class="section-label fade-in">Dos Formas de Participar</div>
-    <h2 class="section-title fade-in">Elige Tu Camino</h2>
-    <p class="section-desc fade-in">Somos transparentes con el intercambio porque creemos en alianzas, no en transacciones.</p>
-
-    <div class="role-grid">
-      <div class="role-card preferred fade-in">
-        <span class="role-card-badge">★ Preferida</span>
-        <h3 class="role-card-title">Familia Facilitadora</h3>
-        <p class="role-card-desc">Una familia que quiere vivir la experiencia Cohli Y sostener el contenedor comunitario. Tu familia participa plenamente — comidas, alojamiento, educación para tus hijos, toda la experiencia — mientras tú sostienes el espacio relacional del grupo.</p>
-        <div class="role-card-exchange">
-          <strong>El intercambio:</strong> Un descuento significativo en la tarifa de participación de tu familia (40–50%, conversado individualmente).
-        </div>
-        <p class="role-card-note">Este es nuestro modelo preferido. No eres "personal contratado" — eres una familia en la aldea que también sostiene la comunidad. Si ya estás considerando Cohli como familia, hablemos.</p>
-      </div>
-
-      <div class="role-card fade-in">
-        <h3 class="role-card-title">Residencia de Facilitación</h3>
-        <p class="role-card-desc">Un individuo (o pareja) — facilitador/a comunitario/a, coach, o fundador/a aspirante de coliving — que quiere una residencia de 4 semanas inmerso/a en comunidad familiar intencional.</p>
-        <div class="role-card-exchange">
-          <strong>El intercambio:</strong> Alojamiento y comidas completamente cubiertos. Sin compensación económica — esto es una residencia de facilitación, no un trabajo remunerado.
-        </div>
-        <p class="role-card-note">Obtienes 4 semanas en las montañas colombianas, un rol significativo, experiencia práctica gestionando una comunidad de coliving, y una referencia de Cohli. Ideal para facilitadores comunitarios experimentados entre temporadas.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHO WE'RE LOOKING FOR -->
-<section class="section" id="buscamos" style="background: white;">
-  <div class="section-inner">
-    <div class="section-label fade-in">A Quién Buscamos</div>
-    <h2 class="section-title fade-in">No es una oferta de empleo. Buscamos un tipo de persona.</h2>
-    <p class="section-desc fade-in">Esto no es una lista de requisitos. Es un retrato de la persona que creemos que florecerá en este rol.</p>
-
-    <div class="traits-grid">
-      <div class="trait-card fade-in">
-        <h3 class="trait-title">Experiencia comunitaria</h3>
-        <p class="trait-desc">Has vivido en comunidad intencional — coliving, cohousing, facilitación de retiros, vida de aldea. Conoces la magia Y la fricción.</p>
-      </div>
-      <div class="trait-card fade-in">
-        <h3 class="trait-title">Sostener sin controlar</h3>
-        <p class="trait-desc">Sabes sostener un espacio sin controlarlo. Sabes cuándo intervenir y cuándo dejar que el grupo se auto-organice.</p>
-      </div>
-      <div class="trait-card fade-in">
-        <h3 class="trait-title">Conflicto como crecimiento</h3>
-        <p class="trait-desc">Te sientes cómodo/a con el conflicto como parte del crecimiento, no como algo que evitar. Guías la reparación, no la supresión.</p>
-      </div>
-      <div class="trait-card fade-in">
-        <h3 class="trait-title">Calidez y límites</h3>
-        <p class="trait-desc">Tienes calidez, límites claros y la madurez para decir "necesito apoyo" cuando es verdad. Bonus: hablas español.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT YOU'LL RECEIVE -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-label fade-in">Qué Recibirás</div>
-    <h2 class="section-title fade-in">Todo lo que ponemos a tu disposición</h2>
-
-    <div class="receive-grid">
-      <div class="receive-card fade-in">
-        <div class="receive-icon">📘</div>
-        <div>
-          <div class="receive-title">Manual del Facilitador</div>
-          <p class="receive-text">Guía detallada sobre rituales, protocolos de conflicto, scripts de límites y cadencias de comunicación.</p>
-        </div>
-      </div>
-      <div class="receive-card fade-in">
-        <div class="receive-icon">🎥</div>
-        <div>
-          <div class="receive-title">Apoyo semanal de fundadores</div>
-          <p class="receive-text">Lauren y Tiago en videollamada cada semana, más WhatsApp para cualquier urgencia.</p>
-        </div>
-      </div>
-      <div class="receive-card fade-in">
-        <div class="receive-icon">📋</div>
-        <div>
-          <div class="receive-title">Role Charter claro</div>
-          <p class="receive-text">Compartido con todos los actores para que todos sepan qué es tuyo y qué no.</p>
-        </div>
-      </div>
-      <div class="receive-card fade-in">
-        <div class="receive-icon">🏔️</div>
-        <div>
-          <div class="receive-title">4 semanas en las montañas</div>
-          <p class="receive-text">Propiedad increíble, comida casera y una comunidad de familias que eligieron estar ahí.</p>
-        </div>
-      </div>
-      <div class="receive-card fade-in">
-        <div class="receive-icon">⭐</div>
-        <div>
-          <div class="receive-title">Referencia y testimonio</div>
-          <p class="receive-text">De Cohli, y consideración prioritaria para futuras cohortes si deseas continuar.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HONEST SECTION -->
-<section class="section section-honest">
-  <div class="section-inner">
-    <div class="section-label fade-in" style="color:white;">Qué NO Es Esto</div>
-    <h2 class="section-title fade-in">Queremos ser transparentes</h2>
-    <p class="section-desc fade-in">Para que las personas adecuadas se auto-seleccionen.</p>
-
-    <div class="honest-grid">
-      <div class="honest-card fade-in">
-        <h3 class="honest-card-title">No es vacaciones</h3>
-        <p class="honest-card-text">Trabajarás. Facilitar comunidad es emocionalmente real y significativo. Los días son plenos.</p>
-      </div>
-      <div class="honest-card fade-in">
-        <h3 class="honest-card-title">No es 24/7</h3>
-        <p class="honest-card-text">Tendrás límites claros y tiempo libre. La prevención del burnout está integrada en el modelo.</p>
-      </div>
-      <div class="honest-card fade-in">
-        <h3 class="honest-card-title">No es en solitario</h3>
-        <p class="honest-card-text">Tienes apoyo del equipo anfitrión, operaciones, educadores y respaldo de los fundadores. Nunca estás solo/a.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section-facilitator-cta" id="apply">
-  <div class="section-facilitator-cta-inner fade-in">
-    <h2>¿Te Interesa?</h2>
-    <p>Cuéntanos sobre ti, tu experiencia con comunidad y qué opción te interesa. No necesitas un CV formal — preferimos escuchar tu historia.</p>
-    <a href="mailto:welcome@cohli.com?subject=Facilitador/a%20%E2%80%94%20Casa%20Sumapaz%202026" class="btn-white">Escribirnos</a>
-    <div class="section-facilitator-cta-email">
-      Email: <a href="mailto:welcome@cohli.com">welcome@cohli.com</a>
-    </div>
-    <p class="section-facilitator-cta-timeline">Las postulaciones se revisan de forma continua. Nos encantaría tener esto confirmado para mediados de mayo de 2026.</p>
-  </div>
-</section>
-
-</div><!-- end lang-es -->
-
-<!-- ═══════════════════════════════════════════════════════════
-     ENGLISH VERSION
-     ═══════════════════════════════════════════════════════════ -->
-<div class="lang-section" id="lang-en">
-
-<!-- CONTEXT -->
-<section class="context-section">
-  <div class="section-inner context-content" style="padding: 60px 24px;">
-    <div class="section-label fade-in">About Cohli</div>
-    <p class="context-text fade-in">Cohli is a global community of nomadic families cocreating intentional coliving and learning experiences around the world. This summer, we're hosting our second residency at <strong>Casa Sumapaz</strong>, a stunning property in the mountains of Cundinamarca, Colombia — where our first cohort scored <strong>9.77/10 NPS</strong>.</p>
-    <p class="context-text fade-in">We're looking for someone to be the heart of this cohort: the <strong>Facilitator</strong>.</p>
-  </div>
-</section>
-
-<!-- THE ROLE -->
-<section class="section" id="the-role">
-  <div class="section-inner">
-    <div class="section-label fade-in">The Role</div>
-    <h2 class="section-title fade-in">Community Facilitator</h2>
-    <p class="section-desc fade-in">You hold the social, emotional, and cultural container for 6–8 families over 4 weeks. Not the logistics (that's our ops team), not the property (that's our hosts), not the education (that's our educators). You hold the people.</p>
-
-    <ul class="resp-list fade-in">
-      <li>Facilitate Opening Circle, weekly Parent Circles, and the closing ceremony.</li>
-      <li>Set the rhythm and energy of the group. Invite co-creation, not passivity.</li>
-      <li>Detect tensions early and guide conflict toward repair.</li>
-      <li>Integrate arriving families intentionally; protect the core group's stability.</li>
-      <li>Weekly check-in with Cohli founders (remote) on community health and wins.</li>
-    </ul>
-
-    <div class="quote-block fade-in">
-      <p class="quote-text">"You are not a camp counselor, a therapist, or a hotel manager. You are the person who makes 8 families feel like a village."</p>
-    </div>
-  </div>
-</section>
-
-<!-- THE RESIDENCY -->
 <section class="section" style="background: white;">
   <div class="section-inner">
-    <div class="section-label fade-in">The Residency</div>
-    <h2 class="section-title fade-in">Casa Sumapaz, Colombia</h2>
-    <p class="section-desc fade-in">Everything you need to know about the experience.</p>
+    <div class="section-label">Two ways to facilitate with us</div>
+    <h2 class="section-title">Pick the path that fits your life right now.</h2>
+    <p class="section-desc">We're transparent about the exchange because we believe in real partnerships, not transactions. Both paths are real. Neither is better — they fit different seasons.</p>
 
-    <div class="details-grid fade-in">
-      <div class="detail-card">
-        <div class="detail-label">Location</div>
-        <div class="detail-value">Casa Sumapaz<br>Arbelaez, Cundinamarca</div>
+    <div class="tracks">
+      <div class="track preferred">
+        <span class="track-badge">★ Preferred</span>
+        <h3>Facilitating Family</h3>
+        <p>A family that wants to live the Cohli experience <em>and</em> hold the community container. Your family participates fully — meals, accommodation, education for your kids, the whole experience — while you hold the relational space for the group.</p>
+        <div class="exch"><strong>The exchange:</strong> A significant discount on your family's participation fee (40–50%, discussed individually).</div>
+        <p style="margin-top:14px; font-size:.88rem; color:var(--stone);">This is our preferred model. You're not "hired help" — you're a family in the village who also holds the heart of it. If you were already considering Cohli as a family, let's talk.</p>
       </div>
-      <div class="detail-card">
-        <div class="detail-label">Dates</div>
-        <div class="detail-value">June 30 – July 30<br>2026 (4 weeks)</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Families</div>
-        <div class="detail-value">6–8 confirmed<br>(6 locked in with deposits)</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">On-site Support</div>
-        <div class="detail-value">Clara & Sebastian, kitchen,<br>cleaning, educators</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Founders</div>
-        <div class="detail-value">Tiago & Lauren remote<br>(weekly video + WhatsApp)</div>
+
+      <div class="track">
+        <h3>Facilitation Residency</h3>
+        <p>An individual (or couple) — community facilitator, coach, retreat host, or aspiring coliving founder — who wants 4–6 weeks immersed in intentional family community.</p>
+        <div class="exch"><strong>The exchange:</strong> Accommodation and meals fully covered. No monetary compensation — this is a residency, not paid work.</div>
+        <p style="margin-top:14px; font-size:.88rem; color:var(--stone);">You get weeks in an extraordinary place, a meaningful role, hands-on experience running an intentional coliving community, and a Cohli reference. Ideal for community facilitators between seasons.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TWO TRACKS -->
-<section class="section" id="how-to-join">
+<!-- CURRENT OPENINGS -->
+<section class="section openings" id="openings">
   <div class="section-inner">
-    <div class="section-label fade-in">Two Ways to Join</div>
-    <h2 class="section-title fade-in">Choose Your Path</h2>
-    <p class="section-desc fade-in">We're transparent about the exchange because we believe in partnerships, not transactions.</p>
+    <div class="section-label">Current openings</div>
+    <h2 class="section-title">Where we're looking right now.</h2>
+    <p class="section-desc">Each opening is a specific cohort with its own context, rhythm, and timing. Click in to see the full role and apply.</p>
 
-    <div class="role-grid">
-      <div class="role-card preferred fade-in">
-        <span class="role-card-badge">★ Preferred</span>
-        <h3 class="role-card-title">Facilitating Family</h3>
-        <p class="role-card-desc">You are a family who wants to live the Cohli experience AND hold the community container. Your family participates fully — meals, accommodation, education for your kids, the whole experience — while you hold the relational space for the group.</p>
-        <div class="role-card-exchange">
-          <strong>The exchange:</strong> A significant discount on your family's participation fee (40–50%, discussed individually).
+    <div class="opening-grid">
+      <a href="/roles/facilitator-casa-sumapaz-jun-2026.html" class="opening-card">
+        <div class="opening-img"><img src="/img/casa-sumapaz/card.jpg" alt="Casa Sumapaz finca" loading="lazy"></div>
+        <div>
+          <div class="opening-meta">June 30 – July 30, 2026 · 4 weeks</div>
+          <h3 class="opening-title">Facilitator — Casa Sumapaz, Colombia</h3>
+          <p class="opening-desc">Hold the container for 6–8 families in the Colombian highlands. Our second cohort at Casa Sumapaz; the first earned an NPS of 9.77.</p>
+          <div class="opening-tags">
+            <span class="opening-tag">Cundinamarca, Colombia</span>
+            <span class="opening-tag">Spanish a plus</span>
+            <span class="opening-tag">Both tracks open</span>
+          </div>
         </div>
-        <p class="role-card-note">This is our preferred model. You're not "staff" — you're a family in the village who also holds the community. If you're a family considering Cohli anyway, let's talk.</p>
-      </div>
-
-      <div class="role-card fade-in">
-        <h3 class="role-card-title">Facilitation Residency</h3>
-        <p class="role-card-desc">You are an individual (or couple) — a community builder, coach, facilitator, or aspiring coliving founder — who wants a 4-week residency embedded in intentional family community.</p>
-        <div class="role-card-exchange">
-          <strong>The exchange:</strong> Accommodation and meals fully covered for the duration. No cash stipend — this is a facilitation residency, not a paid gig.
-        </div>
-        <p class="role-card-note">You get 4 weeks in the Colombian mountains, a meaningful role, hands-on experience running a coliving community, and a reference from Cohli. Great fit for experienced community builders or coaches between seasons.</p>
-      </div>
+        <div class="opening-arrow">→</div>
+      </a>
     </div>
+
+    <p style="margin-top: 24px; font-size: .9rem; color: var(--stone); text-align: center;">More cohorts opening through 2026. Aterra (Alentejo, Portugal · Jul–Aug) is held on-site by Lauren &amp; Tiago. Alentejo Eco-Farm (Portugal · Nov) is in planning — facilitator openings will appear here when confirmed.</p>
   </div>
 </section>
 
-<!-- WHO WE'RE LOOKING FOR -->
-<section class="section" id="who-we-want" style="background: white;">
-  <div class="section-inner">
-    <div class="section-label fade-in">Who We're Looking For</div>
-    <h2 class="section-title fade-in">Not a job listing. We're looking for a kind of person.</h2>
-    <p class="section-desc fade-in">This isn't a checklist of requirements. It's a portrait of the person we believe will thrive in this role.</p>
-
-    <div class="traits-grid">
-      <div class="trait-card fade-in">
-        <h3 class="trait-title">Community experience</h3>
-        <p class="trait-desc">You've lived in intentional community — coliving, cohousing, retreat facilitation, village life. You know the magic AND the friction.</p>
-      </div>
-      <div class="trait-card fade-in">
-        <h3 class="trait-title">Hold without controlling</h3>
-        <p class="trait-desc">You can hold space without controlling it. You know when to step in and when to let the group self-organize.</p>
-      </div>
-      <div class="trait-card fade-in">
-        <h3 class="trait-title">Conflict as growth</h3>
-        <p class="trait-desc">You're comfortable with conflict as part of growth, not something to avoid. You guide repair, not suppression.</p>
-      </div>
-      <div class="trait-card fade-in">
-        <h3 class="trait-title">Warmth and boundaries</h3>
-        <p class="trait-desc">You have warmth, clear boundaries, and the maturity to say "I need support" when it's true. Bonus: you speak Spanish.</p>
-      </div>
-    </div>
+<!-- ALWAYS-ON POOL -->
+<section class="pool">
+  <div class="pool-inner">
+    <h2>Don't see the right cohort?</h2>
+    <p>If facilitating with us feels right but no current opening fits your timing, location, or season — tell us anyway. We keep a small pool of facilitators we know and trust, and we reach out as new cohorts land.</p>
+    <a href="mailto:welcome@cohli.com?subject=Join%20the%20Cohli%20facilitator%20pool&body=Hi%20Lauren%20%26%20Tiago%2C%0A%0AI%27d%20like%20to%20be%20in%20the%20pool%20for%20future%20Cohli%20facilitator%20openings.%0A%0AName%3A%0AWhere%20I%27m%20based%3A%0AFacilitation%20experience%3A%0AWhich%20track%20fits%20me%20%28Facilitating%20Family%20%2F%20Facilitation%20Residency%29%3A%0AWhy%20Cohli%3A%0A" class="btn-white">Join the facilitator pool</a>
+    <span class="alt">Or write to us directly: <a href="mailto:welcome@cohli.com?subject=Facilitating%20with%20Cohli">welcome@cohli.com</a></span>
   </div>
 </section>
-
-<!-- WHAT YOU'LL RECEIVE -->
-<section class="section">
-  <div class="section-inner">
-    <div class="section-label fade-in">What You'll Receive</div>
-    <h2 class="section-title fade-in">Everything we put at your disposal</h2>
-
-    <div class="receive-grid">
-      <div class="receive-card fade-in">
-        <div class="receive-icon">📘</div>
-        <div>
-          <div class="receive-title">A Facilitator Playbook</div>
-          <p class="receive-text">Detailed guidance on rituals, conflict protocols, boundary scripts, and communication cadences.</p>
-        </div>
-      </div>
-      <div class="receive-card fade-in">
-        <div class="receive-icon">🎥</div>
-        <div>
-          <div class="receive-title">Weekly founder support</div>
-          <p class="receive-text">Lauren and Tiago on a video call every week, plus WhatsApp for anything urgent.</p>
-        </div>
-      </div>
-      <div class="receive-card fade-in">
-        <div class="receive-icon">📋</div>
-        <div>
-          <div class="receive-title">A clear Role Charter</div>
-          <p class="receive-text">Shared with all stakeholders so everyone knows what's yours and what isn't.</p>
-        </div>
-      </div>
-      <div class="receive-card fade-in">
-        <div class="receive-icon">🏔️</div>
-        <div>
-          <div class="receive-title">4 weeks in the mountains</div>
-          <p class="receive-text">Incredible property, home-cooked meals, and a community of families who chose to be there.</p>
-        </div>
-      </div>
-      <div class="receive-card fade-in">
-        <div class="receive-icon">⭐</div>
-        <div>
-          <div class="receive-title">A reference and testimonial</div>
-          <p class="receive-text">From Cohli, and priority consideration for future cohorts if you want to continue.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HONEST SECTION -->
-<section class="section section-honest">
-  <div class="section-inner">
-    <div class="section-label fade-in" style="color:white;">What This Is Not</div>
-    <h2 class="section-title fade-in">We want to be upfront</h2>
-    <p class="section-desc fade-in">So the right people self-select.</p>
-
-    <div class="honest-grid">
-      <div class="honest-card fade-in">
-        <h3 class="honest-card-title">Not a vacation</h3>
-        <p class="honest-card-text">You will work. Facilitating community is emotionally real and meaningful. The days are full.</p>
-      </div>
-      <div class="honest-card fade-in">
-        <h3 class="honest-card-title">Not 24/7</h3>
-        <p class="honest-card-text">You will have clear boundaries and time off. Burnout prevention is built into the model.</p>
-      </div>
-      <div class="honest-card fade-in">
-        <h3 class="honest-card-title">Not a solo mission</h3>
-        <p class="honest-card-text">You have host support, an ops team, educators, and founder backup. You're never alone.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section-facilitator-cta" id="apply-en">
-  <div class="section-facilitator-cta-inner fade-in">
-    <h2>Interested?</h2>
-    <p>Tell us about yourself, your experience with community, and which track interests you. No formal CV needed — we'd rather hear your story.</p>
-    <a href="mailto:welcome@cohli.com?subject=Facilitator%20%E2%80%94%20Casa%20Sumapaz%202026" class="btn-white">Get in Touch</a>
-    <div class="section-facilitator-cta-email">
-      Email: <a href="mailto:welcome@cohli.com">welcome@cohli.com</a>
-    </div>
-    <p class="section-facilitator-cta-timeline">Applications reviewed on a rolling basis. We'd love to have this confirmed by mid-May 2026.</p>
-  </div>
-</section>
-
-</div><!-- end lang-en -->
 
 <!-- FOOTER -->
 <footer>
@@ -850,9 +240,11 @@
       <a href="/#cohorts">Upcoming Cohorts</a>
       <a href="/#how-it-works">How It Works</a>
       <a href="/#story">Our Story</a>
+      <a href="/#testimonials">Family Stories</a>
     </div>
     <div class="footer-col">
       <h4>Community</h4>
+      <a href="/#newsletter">Join the Newsletter</a>
       <a href="/#newsletter">The Village Post</a>
       <a href="https://instagram.com/heycohli" rel="noopener" target="_blank">Instagram</a>
     </div>
@@ -868,72 +260,7 @@
   </div>
 </footer>
 
-<!-- Scripts -->
 <script src="/js/main.js"></script>
-<script>
-  // Nav link sets per language
-  const navData = {
-    es: {
-      links: [
-        { href: '#el-rol', text: 'El Rol' },
-        { href: '#participar', text: 'Cómo Participar' },
-        { href: '#buscamos', text: 'A Quién Buscamos' }
-      ],
-      cta: { href: '#apply', text: 'Postularme' },
-      sub: 'Facilitador/a'
-    },
-    en: {
-      links: [
-        { href: '#the-role', text: 'The Role' },
-        { href: '#how-to-join', text: 'How to Join' },
-        { href: '#who-we-want', text: 'Who We Look For' }
-      ],
-      cta: { href: '#apply-en', text: 'Apply' },
-      sub: 'Facilitator'
-    }
-  };
-
-  function updateNav(lang) {
-    const data = navData[lang];
-    // Desktop nav
-    const navLinks = document.querySelector('.nav-links');
-    const desktopAnchors = navLinks.querySelectorAll('a:not(.nav-cta)');
-    desktopAnchors.forEach((a, i) => {
-      if (data.links[i]) { a.href = data.links[i].href; a.textContent = data.links[i].text; }
-    });
-    const desktopCta = navLinks.querySelector('.nav-cta');
-    desktopCta.href = data.cta.href; desktopCta.textContent = data.cta.text;
-    // Mobile menu
-    const mobileAnchors = document.querySelectorAll('#mobileMenu a:not(.nav-cta)');
-    mobileAnchors.forEach((a, i) => {
-      if (data.links[i]) { a.href = data.links[i].href; a.textContent = data.links[i].text; }
-    });
-    const mobileCta = document.querySelector('#mobileMenu .nav-cta');
-    mobileCta.href = data.cta.href; mobileCta.textContent = data.cta.text;
-    // Logo sub
-    document.querySelector('.logo-sub').textContent = data.sub;
-  }
-
-  // Language toggle
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.lang;
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
-      document.getElementById('lang-' + lang).classList.add('active');
-      // Update nav links and text
-      updateNav(lang);
-      // Re-observe fade-in elements in the newly visible section
-      document.querySelectorAll('#lang-' + lang + ' .fade-in').forEach(el => {
-        el.classList.remove('visible');
-        fadeObserver.observe(el);
-      });
-      // Scroll to top of content
-      document.querySelector('.lang-toggle').scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-</script>
 
 </body>
 </html>
