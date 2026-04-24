@@ -546,12 +546,12 @@
       <div class="section-label">The Village Post</div>
       <div class="section-title" style="font-size:1.8rem;">A letter from us, every other week</div>
       <p style="color:var(--stone); font-size:.95rem;">What we're learning about each cohort, worldschooling, and what it really looks like when families choose differently. Written by us and sent to you.</p>
-      <form class="newsletter-form" onsubmit="event.preventDefault(); var e = this.querySelector('input[type=email]').value; if(!e) return false; window.location.href = 'mailto:welcome@cohli.com?subject=' + encodeURIComponent('Subscribe me to The Village Post') + '&body=' + encodeURIComponent('Please add me to The Village Post newsletter.\n\nEmail: ' + e + '\n\nThanks!'); return false;">
-        <!-- TODO: Replace with ActiveCampaign form embed -->
-        <input type="email" class="newsletter-input" placeholder="Your email address" required>
-        <button type="submit" class="newsletter-btn">Sign up for the newsletter</button>
-      </form>
-      <p style="font-size:.75rem; color:var(--driftwood); margin-top:12px;">Join 1,500+ families. We'll open your email app so you can confirm. Unsubscribe anytime.</p>
+      <!-- ActiveCampaign newsletter embed — form styling overridden in home.css .newsletter-box ._form scope -->
+      <div class="newsletter-ac-wrap">
+        <div class="_form_3"></div>
+        <script src="https://nomadnest.activehosted.com/f/embed.php?id=3" charset="utf-8"></script>
+      </div>
+      <p style="font-size:.75rem; color:var(--driftwood); margin-top:12px;">Join 1,500+ families. Unsubscribe anytime.</p>
     </div>
   </div>
 </section>

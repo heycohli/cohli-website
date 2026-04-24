@@ -176,6 +176,125 @@
 }
 .newsletter-btn:hover { background: var(--ember); }
 
+/* === ActiveCampaign newsletter form overrides ===
+   AC injects its own form HTML into ._form_3. These rules re-skin it to match
+   the Cohli newsletter-form (pill input + terracotta pill button). */
+.newsletter-ac-wrap { margin-top: 24px; }
+.newsletter-box ._form,
+.newsletter-box ._form_3,
+.newsletter-box ._form_3 ._form {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+  font-family: var(--font-body) !important;
+}
+.newsletter-box ._form-title,
+.newsletter-box ._form-branding,
+.newsletter-box ._form-label,
+.newsletter-box ._form-subtitle { display: none !important; }
+.newsletter-box ._form-content {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.newsletter-box ._form_element {
+  flex: 1 1 260px !important;
+  min-width: 240px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+}
+.newsletter-box ._form_element ._field-wrapper { margin: 0 !important; }
+.newsletter-box ._form_element input[type="text"],
+.newsletter-box ._form_element input[type="email"] {
+  width: 100% !important;
+  padding: 14px 20px !important;
+  border: 1.5px solid var(--driftwood) !important;
+  border-radius: var(--radius-pill) !important;
+  font-family: var(--font-body) !important;
+  font-size: .95rem !important;
+  background: white !important;
+  color: var(--dark) !important;
+  outline: none !important;
+  transition: var(--ease) !important;
+  box-shadow: none !important;
+  height: auto !important;
+  line-height: 1.4 !important;
+}
+.newsletter-box ._form_element input[type="text"]:focus,
+.newsletter-box ._form_element input[type="email"]:focus {
+  border-color: var(--terracotta) !important;
+}
+.newsletter-box ._button-wrapper,
+.newsletter-box ._form_element._button-wrapper {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+.newsletter-box ._button-wrapper ._submit,
+.newsletter-box button._submit,
+.newsletter-box input[type="submit"] {
+  background: var(--terracotta) !important;
+  color: white !important;
+  padding: 14px 28px !important;
+  border-radius: var(--radius-pill) !important;
+  font-size: .95rem !important;
+  font-weight: 600 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: var(--ease) !important;
+  font-family: var(--font-body) !important;
+  width: auto !important;
+  height: auto !important;
+  line-height: 1 !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+.newsletter-box ._button-wrapper ._submit:hover,
+.newsletter-box button._submit:hover,
+.newsletter-box input[type="submit"]:hover {
+  background: var(--ember) !important;
+}
+/* Thank-you confirmation state */
+.newsletter-box ._form-thank-you {
+  font-family: var(--font-headline) !important;
+  font-size: 1.2rem !important;
+  color: var(--terracotta) !important;
+  padding: 24px 0 !important;
+  text-align: center !important;
+  background: transparent !important;
+}
+/* Validation errors */
+.newsletter-box ._error,
+.newsletter-box ._form_element ._error-inner {
+  font-size: .85rem !important;
+  color: var(--terracotta) !important;
+  margin-top: 6px !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-family: var(--font-body) !important;
+}
+.newsletter-box ._error-arrow { display: none !important; }
+/* Mobile stack */
+@media (max-width: 540px) {
+  .newsletter-box ._form-content { flex-direction: column !important; }
+  .newsletter-box ._form_element,
+  .newsletter-box ._button-wrapper { width: 100% !important; flex: 1 1 100% !important; }
+  .newsletter-box ._button-wrapper ._submit { width: 100% !important; }
+}
+
 /* === INSTAGRAM GRID === */
 .insta-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 4px; border-radius: var(--radius-sm); overflow: hidden; margin: 24px 0; }
 .insta-item { aspect-ratio: 1; min-height: 0; }
