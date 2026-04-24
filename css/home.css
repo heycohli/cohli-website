@@ -176,27 +176,49 @@
 }
 .newsletter-btn:hover { background: var(--ember); }
 
-/* === ActiveCampaign newsletter form overrides ===
-   AC injects its own form HTML into ._form_3. These rules re-skin it to match
-   the Cohli newsletter-form (pill input + terracotta pill button). */
+/* === ActiveCampaign newsletter form overrides (aggressive reset)
+   AC injects its own HTML + inline styles into ._form_3. These rules:
+   1. Strip every AC-applied visual style from every descendant,
+   2. Then re-skin just the input + button to match Cohli's pill aesthetic. */
+
 .newsletter-ac-wrap { margin-top: 24px; }
-.newsletter-box ._form,
-.newsletter-box ._form_3,
-.newsletter-box ._form_3 ._form {
+
+/* Nuclear reset: clear every AC container's background, border, padding.
+   Excludes input/button because we re-style those explicitly below. */
+.newsletter-ac-wrap,
+.newsletter-ac-wrap *:not(input):not(button):not(select):not(textarea) {
   background: transparent !important;
+  background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  font-family: var(--font-body) !important;
+  max-width: none !important;
+}
+
+/* Hide AC's titles, labels, branding, subtitles, required asterisks */
+.newsletter-ac-wrap ._form-title,
+.newsletter-ac-wrap ._form-subtitle,
+.newsletter-ac-wrap ._form-branding,
+.newsletter-ac-wrap ._form-label,
+.newsletter-ac-wrap label,
+.newsletter-ac-wrap ._required,
+.newsletter-ac-wrap ._field-instructions,
+.newsletter-ac-wrap [class*="required"] { display: none !important; }
+
+/* Outer form container — strip padding, stretch full-width */
+.newsletter-ac-wrap form,
+.newsletter-ac-wrap ._form,
+.newsletter-ac-wrap ._form_3,
+.newsletter-ac-wrap [class*="_form"] {
   padding: 0 !important;
   margin: 0 !important;
-  max-width: none !important;
   width: 100% !important;
-  font-family: var(--font-body) !important;
+  color: var(--dark) !important;
 }
-.newsletter-box ._form-title,
-.newsletter-box ._form-branding,
-.newsletter-box ._form-label,
-.newsletter-box ._form-subtitle { display: none !important; }
-.newsletter-box ._form-content {
+
+/* Arrange fields + button in a flex row (like the original Cohli form) */
+.newsletter-ac-wrap ._form-content,
+.newsletter-ac-wrap [class*="_form-content"] {
   display: flex !important;
   gap: 12px !important;
   flex-wrap: wrap !important;
@@ -205,17 +227,27 @@
   margin: 0 !important;
   padding: 0 !important;
 }
-.newsletter-box ._form_element {
+
+/* Each field wrapper = flex item */
+.newsletter-ac-wrap ._form_element,
+.newsletter-ac-wrap [class*="_form_element"] {
   flex: 1 1 260px !important;
   min-width: 240px !important;
   margin: 0 !important;
   padding: 0 !important;
   width: auto !important;
-  max-width: none !important;
 }
-.newsletter-box ._form_element ._field-wrapper { margin: 0 !important; }
-.newsletter-box ._form_element input[type="text"],
-.newsletter-box ._form_element input[type="email"] {
+.newsletter-ac-wrap ._field-wrapper,
+.newsletter-ac-wrap [class*="_field-wrapper"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Inputs: pill-shaped, driftwood border, white bg, focuses to terracotta */
+.newsletter-ac-wrap input[type="text"],
+.newsletter-ac-wrap input[type="email"],
+.newsletter-ac-wrap input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]) {
   width: 100% !important;
   padding: 14px 20px !important;
   border: 1.5px solid var(--driftwood) !important;
@@ -223,76 +255,96 @@
   font-family: var(--font-body) !important;
   font-size: .95rem !important;
   background: white !important;
+  background-color: white !important;
   color: var(--dark) !important;
   outline: none !important;
   transition: var(--ease) !important;
   box-shadow: none !important;
   height: auto !important;
   line-height: 1.4 !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
 }
-.newsletter-box ._form_element input[type="text"]:focus,
-.newsletter-box ._form_element input[type="email"]:focus {
+.newsletter-ac-wrap input[type="text"]:focus,
+.newsletter-ac-wrap input[type="email"]:focus,
+.newsletter-ac-wrap input:not([type="submit"]):focus {
   border-color: var(--terracotta) !important;
 }
-.newsletter-box ._button-wrapper,
-.newsletter-box ._form_element._button-wrapper {
+
+/* Button wrapper + button: terracotta pill, DM Sans semibold, ember hover */
+.newsletter-ac-wrap ._button-wrapper,
+.newsletter-ac-wrap [class*="_button-wrapper"],
+.newsletter-ac-wrap ._submit-wrapper {
   flex: 0 0 auto !important;
   margin: 0 !important;
   padding: 0 !important;
   width: auto !important;
+  text-align: center !important;
 }
-.newsletter-box ._button-wrapper ._submit,
-.newsletter-box button._submit,
-.newsletter-box input[type="submit"] {
+.newsletter-ac-wrap button,
+.newsletter-ac-wrap input[type="submit"],
+.newsletter-ac-wrap ._submit,
+.newsletter-ac-wrap [class*="_submit"] {
   background: var(--terracotta) !important;
+  background-color: var(--terracotta) !important;
   color: white !important;
   padding: 14px 28px !important;
+  border: none !important;
   border-radius: var(--radius-pill) !important;
   font-size: .95rem !important;
   font-weight: 600 !important;
-  border: none !important;
+  font-family: var(--font-body) !important;
   cursor: pointer !important;
   transition: var(--ease) !important;
-  font-family: var(--font-body) !important;
   width: auto !important;
   height: auto !important;
   line-height: 1 !important;
   box-shadow: none !important;
   text-transform: none !important;
   letter-spacing: 0 !important;
+  margin: 0 !important;
 }
-.newsletter-box ._button-wrapper ._submit:hover,
-.newsletter-box button._submit:hover,
-.newsletter-box input[type="submit"]:hover {
+.newsletter-ac-wrap button:hover,
+.newsletter-ac-wrap input[type="submit"]:hover,
+.newsletter-ac-wrap ._submit:hover {
   background: var(--ember) !important;
+  background-color: var(--ember) !important;
 }
+
 /* Thank-you confirmation state */
-.newsletter-box ._form-thank-you {
+.newsletter-ac-wrap ._form-thank-you,
+.newsletter-ac-wrap [class*="_form-thank-you"],
+.newsletter-ac-wrap [class*="thank-you"] {
   font-family: var(--font-headline) !important;
   font-size: 1.2rem !important;
   color: var(--terracotta) !important;
   padding: 24px 0 !important;
   text-align: center !important;
-  background: transparent !important;
 }
+
 /* Validation errors */
-.newsletter-box ._error,
-.newsletter-box ._form_element ._error-inner {
+.newsletter-ac-wrap ._error,
+.newsletter-ac-wrap ._error-inner,
+.newsletter-ac-wrap [class*="_error"] {
   font-size: .85rem !important;
   color: var(--terracotta) !important;
   margin-top: 6px !important;
-  background: transparent !important;
-  border: none !important;
   padding: 0 !important;
   font-family: var(--font-body) !important;
+  text-align: left !important;
 }
-.newsletter-box ._error-arrow { display: none !important; }
+.newsletter-ac-wrap ._error-arrow,
+.newsletter-ac-wrap [class*="_error-arrow"] { display: none !important; }
+
 /* Mobile stack */
 @media (max-width: 540px) {
-  .newsletter-box ._form-content { flex-direction: column !important; }
-  .newsletter-box ._form_element,
-  .newsletter-box ._button-wrapper { width: 100% !important; flex: 1 1 100% !important; }
-  .newsletter-box ._button-wrapper ._submit { width: 100% !important; }
+  .newsletter-ac-wrap ._form-content,
+  .newsletter-ac-wrap [class*="_form-content"] { flex-direction: column !important; }
+  .newsletter-ac-wrap ._form_element,
+  .newsletter-ac-wrap ._button-wrapper { width: 100% !important; flex: 1 1 100% !important; }
+  .newsletter-ac-wrap button,
+  .newsletter-ac-wrap input[type="submit"],
+  .newsletter-ac-wrap ._submit { width: 100% !important; }
 }
 
 /* === INSTAGRAM GRID === */
