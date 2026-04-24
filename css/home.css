@@ -157,23 +157,7 @@
 .founder-img { display: flex; justify-content: center; align-items: center; }
 .founder-img img { width: 100%; max-width: 220px; aspect-ratio: 1/1; height: auto; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: 0 6px 24px rgba(67,49,40,.12); }
 
-/* === HONEST SECTION (earthy, grounded, not somber) === */
-.honest-section { background: var(--clay); color: var(--dark); position: relative; }
-.honest-section::before {
-  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-  background: var(--terracotta);
-}
-.honest-section .section-label { color: var(--terracotta); }
-.honest-section .section-title { color: var(--dark); }
-.honest-section .section-desc { color: var(--stone); }
-.honest-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
-.honest-card {
-  padding: 24px; border-radius: var(--radius-sm);
-  background: rgba(255,255,255,.55);
-  border: 1px solid rgba(180,107,82,.18);
-}
-.honest-card h4 { color: var(--terracotta); font-size: 1rem; margin-bottom: 8px; }
-.honest-card p { font-size: .9rem; color: var(--stone); }
+/* === HONEST SECTION — moved to base.css for reuse across role/cohort pages === */
 
 /* === NEWSLETTER === */
 .newsletter-section { background: linear-gradient(135deg, rgba(210,169,96,.08) 0%, rgba(180,107,82,.06) 100%); }
@@ -211,7 +195,7 @@
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
   .hero h1 { font-size: 2.4rem; }
-  .how-grid, .pillars-grid, .honest-grid, .who-grid { grid-template-columns: 1fr; }
+  .how-grid, .pillars-grid, .who-grid { grid-template-columns: 1fr; }
   .founder-grid { grid-template-columns: 1fr; }
   .trust-inner { gap: 24px; }
   .insta-grid { grid-template-columns: repeat(3,1fr); }

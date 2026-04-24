@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educator — Aterra, Portugal · Jul–Aug 2026 · Cohli</title>
+  <meta name="description" content="Open roles: Lead Educator and Assistant Educator for Cohli's Aterra cohort, July 5 – August 1, 2026. Up to 10 families, ~15 children ages 2–12, in the Alentejo forest of Southern Portugal.">
+  <meta name="keywords" content="educator, lead educator, assistant teacher, worldschooling, Aterra, Alentejo, Portugal, family coliving, Cohli, place-based learning">
+  <link rel="canonical" href="https://cohli.com/roles/educator-aterra-jul-2026.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Open Roles: Educators — Aterra, Portugal · Jul–Aug 2026">
+  <meta property="og:description" content="Hold the learning space for ~15 kids in the Alentejo forest. 4 weeks. Up to 10 families. Lead + Assistant roles open.">
+  <meta property="og:url" content="https://cohli.com/roles/educator-aterra-jul-2026.html">
+  <meta property="og:image" content="https://cohli.com/img/aterra/aterra-life-01.jpg">
+  <meta property="og:site_name" content="Cohli">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#b46b52">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+
+  <style>
+    /* ═══════════════════════════════════════════
+       EDUCATOR — ATERRA ROLE PAGE STYLES
+       Mirrors facilitator-casa-sumapaz structure
+       ═══════════════════════════════════════════ */
+
+    /* Hero with background image */
+    .hero-role-page {
+      min-height: 80vh;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      padding: 140px 24px 80px;
+      text-align: center; color: white;
+    }
+    .hero-role-page-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('/img/aterra/aterra-life-01.jpg');
+      background-size: cover; background-position: center;
+    }
+    .hero-role-page-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(42,42,42,.3) 0%,
+        rgba(180,107,82,.6) 40%,
+        rgba(180,107,82,.88) 70%,
+        var(--terracotta) 100%);
+    }
+    .hero-role-page-content {
+      max-width: 800px; margin: 0 auto;
+      position: relative; z-index: 2;
+    }
+    .hero-role-page h1 {
+      font-family: var(--font-headline);
+      font-size: 3.2rem; font-weight: 900;
+      margin-bottom: 20px; line-height: 1.15; color: white;
+    }
+    .hero-role-page-sub {
+      font-size: 1.15rem; color: rgba(255,255,255,.95);
+      margin-bottom: 12px; line-height: 1.6; font-weight: 300;
+    }
+    .hero-role-page-meta {
+      font-size: .9rem; color: rgba(255,255,255,.7);
+      margin-bottom: 36px; font-weight: 500;
+      letter-spacing: .5px;
+    }
+    .hero-role-page-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white; color: var(--terracotta);
+      padding: 16px 40px; border-radius: var(--radius-pill);
+      font-weight: 700; text-decoration: none;
+      transition: var(--ease); font-size: 1.05rem;
+    }
+    .hero-role-page-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+
+    /* Gallery strip */
+    .gallery-strip {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px;
+      overflow: hidden;
+    }
+    .gallery-strip img {
+      width: 100%; height: 160px; object-fit: cover;
+      transition: var(--ease-slow);
+    }
+    .gallery-strip img:hover {
+      transform: scale(1.05); filter: brightness(1.05);
+    }
+
+    /* Context section */
+    .context-section { background: white; border-bottom: 1px solid var(--clay); }
+    .context-content { max-width: 800px; margin: 0 auto; }
+    .context-text {
+      font-size: .95rem; color: var(--stone);
+      line-height: 1.8; margin-bottom: 16px;
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: flex; justify-content: center; gap: 8px;
+      padding: 20px 24px; background: white; border-bottom: 1px solid var(--clay);
+      position: sticky; top: 72px; z-index: 100;
+    }
+    .lang-btn {
+      padding: 8px 20px; border-radius: var(--radius-pill);
+      font-size: .85rem; font-weight: 600; cursor: pointer;
+      border: 1.5px solid var(--driftwood); background: transparent;
+      color: var(--stone); transition: var(--ease);
+      font-family: var(--font-body);
+    }
+    .lang-btn.active {
+      background: var(--terracotta); color: white;
+      border-color: var(--terracotta);
+    }
+    .lang-btn:hover:not(.active) {
+      border-color: var(--terracotta); color: var(--terracotta);
+    }
+
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+
+    /* Role cards */
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px; margin-top: 48px;
+    }
+    .role-card {
+      background: white; padding: 40px 32px;
+      border-radius: var(--radius-md); border: 2px solid var(--clay);
+      transition: var(--ease-slow); position: relative;
+    }
+    .role-card:hover {
+      border-color: var(--terracotta);
+      box-shadow: 0 8px 32px rgba(180,107,82,.12);
+      transform: translateY(-4px);
+    }
+    .role-card.preferred { border-color: var(--terracotta); }
+    .role-card-badge {
+      position: absolute; top: -12px; right: 20px;
+      background: var(--terracotta); color: white;
+      font-size: .7rem; font-weight: 700;
+      padding: 4px 14px; border-radius: 20px;
+      letter-spacing: .5px; text-transform: uppercase;
+    }
+    .role-card-title {
+      font-family: var(--font-headline); font-size: 1.6rem;
+      font-weight: 900; color: var(--dark); margin-bottom: 16px;
+    }
+    .role-card-desc {
+      font-size: .95rem; color: var(--stone);
+      line-height: 1.7; margin-bottom: 20px;
+    }
+    .role-card-exchange {
+      padding: 16px; background: rgba(180,107,82,.05);
+      border-radius: var(--radius-sm); border-left: 3px solid var(--terracotta);
+      font-size: .9rem; color: var(--dark); line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .role-card-exchange strong { font-weight: 700; }
+    .role-card-note {
+      font-size: .85rem; color: var(--stone); font-style: italic;
+      line-height: 1.5;
+    }
+
+    /* Responsibilities list */
+    .resp-list { list-style: none; margin: 0 0 20px; }
+    .resp-list li {
+      padding-left: 24px; margin-bottom: 14px;
+      position: relative; font-size: .95rem;
+      color: var(--stone); line-height: 1.6;
+    }
+    .resp-list li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--terracotta); font-weight: 900;
+    }
+
+    /* Details grid */
+    .details-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px; margin-top: 40px;
+    }
+    .detail-card {
+      padding: 24px; background: white;
+      border-radius: var(--radius-md); border: 1px solid var(--clay);
+    }
+    .detail-label {
+      font-size: .7rem; text-transform: uppercase;
+      letter-spacing: 1.5px; font-weight: 600;
+      color: var(--terracotta); margin-bottom: 6px;
+    }
+    .detail-value {
+      font-size: .95rem; color: var(--dark);
+      line-height: 1.5; font-weight: 500;
+    }
+
+    /* Traits grid */
+    .traits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px; margin-top: 48px;
+    }
+    .trait-card {
+      background: white; padding: 32px;
+      border-radius: var(--radius-md); border: 1px solid var(--clay);
+      transition: var(--ease-slow);
+    }
+    .trait-card:hover {
+      border-color: var(--terracotta);
+      background: linear-gradient(135deg, rgba(180,107,82,.02) 0%, transparent 100%);
+      transform: translateY(-2px);
+    }
+    .trait-title {
+      font-family: var(--font-headline); font-size: 1.15rem;
+      font-weight: 700; color: var(--dark); margin-bottom: 12px;
+    }
+    .trait-desc {
+      font-size: .9rem; color: var(--stone); line-height: 1.6;
+    }
+
+    /* Receive grid */
+    .receive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px; margin-top: 40px;
+    }
+    .receive-card {
+      padding: 28px; background: white;
+      border-radius: var(--radius-md); border: 1px solid var(--clay);
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .receive-icon {
+      font-size: 1.4rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .receive-title {
+      font-weight: 700; color: var(--dark);
+      font-size: .95rem; margin-bottom: 4px;
+    }
+    .receive-text {
+      font-size: .85rem; color: var(--stone); line-height: 1.6;
+    }
+
+    /* Honest / Reality Check section — styles live in base.css (.honest-section) */
+
+    /* CTA section */
+    .section-role-cta {
+      background: var(--terracotta); color: white;
+      padding: 80px 24px; text-align: center;
+    }
+    .section-role-cta-inner { max-width: 700px; margin: 0 auto; }
+    .section-role-cta h2 {
+      font-family: var(--font-headline); font-size: 2.4rem;
+      font-weight: 900; margin-bottom: 20px; line-height: 1.2; color: white;
+    }
+    .section-role-cta p {
+      font-size: 1.05rem; color: rgba(255,255,255,.95);
+      margin-bottom: 32px; line-height: 1.6;
+    }
+    .section-role-cta .btn-white { display: inline-block; margin-bottom: 24px; }
+    .section-role-cta-email { font-size: .9rem; color: rgba(255,255,255,.8); }
+    .section-role-cta-email a {
+      color: white; font-weight: 600; text-decoration: none; transition: var(--ease);
+    }
+    .section-role-cta-email a:hover { opacity: .8; }
+    .section-role-cta-timeline {
+      font-size: .85rem; color: rgba(255,255,255,.65);
+      font-style: italic; margin-top: 12px;
+    }
+
+    /* Quote */
+    .quote-block {
+      max-width: 700px; margin: 0 auto;
+      text-align: center; padding: 40px 0;
+    }
+    .quote-text {
+      font-family: var(--font-quote); font-size: 1.3rem;
+      font-style: italic; color: var(--terracotta);
+      line-height: 1.7; margin-bottom: 12px;
+    }
+    .quote-attr {
+      font-size: .85rem; color: var(--stone); font-weight: 500;
+    }
+
+    /* Footer override */
+    footer {
+      background: var(--dark); color: white;
+      padding: 60px 24px 24px;
+    }
+    .footer-inner {
+      max-width: var(--max-width-wide); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px; margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      font-family: var(--font-body); font-size: .9rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: rgba(255,255,255,.7); margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block; color: rgba(255,255,255,.75);
+      text-decoration: none; font-size: .85rem;
+      margin-bottom: 12px; transition: var(--ease);
+    }
+    .footer-col a:hover { color: white; }
+    .footer-col p {
+      font-size: .85rem; color: rgba(255,255,255,.65); line-height: 1.6;
+    }
+    .footer-bottom {
+      max-width: var(--max-width-wide); margin: 0 auto;
+      padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1);
+      text-align: center; font-size: .8rem; color: rgba(255,255,255,.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-role-page h1 { font-size: 2rem; }
+      .hero-role-page { padding: 100px 24px 60px; min-height: 70vh; }
+      .section-role-cta h2 { font-size: 1.8rem; }
+      .role-grid { grid-template-columns: 1fr; }
+      .gallery-strip img { height: 100px; }
+    }
+    @media (max-width: 480px) {
+      .hero-role-page h1 { font-size: 1.6rem; }
+      .hero-role-page-sub { font-size: 1rem; }
+      .gallery-strip { grid-template-columns: repeat(3, 1fr); }
+      .gallery-strip img:nth-child(4),
+      .gallery-strip img:nth-child(5) { display: none; }
+    }
+  </style>
+  <link rel="icon" href="/img/brand/favicon.png" type="image/png">
+  <link rel="icon" href="/img/brand/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/img/brand/apple-touch-icon.png">
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ63CNMW27"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TQ63CNMW27');
+  </script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="logo-wrap">
+      <a href="/" class="logo">cohli</a>
+      <span class="logo-sep">/</span>
+      <span class="logo-sub">Educator</span>
+    </div>
+    <div class="nav-links">
+      <a href="#the-role">The Role</a>
+      <a href="#how-to-join">How to Join</a>
+      <a href="#who-we-want">Who We Look For</a>
+      <a href="#apply-en" class="nav-cta">Apply</a>
+    </div>
+    <button class="mobile-menu" aria-label="Open menu">
+      <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mobileMenu">
+  <a href="#the-role">The Role</a>
+  <a href="#how-to-join">How to Join</a>
+  <a href="#who-we-want">Who We Look For</a>
+  <a href="#apply-en" class="nav-cta">Apply</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div style="background: var(--alabaster, #f4ede3); border-bottom: 1px solid rgba(180,107,82,.12); padding: 12px 24px;">
+  <div style="max-width: 1200px; margin: 0 auto; font-size: .85rem; color: var(--stone, #5d4e42);">
+    <a href="/educator.html" style="color: var(--terracotta, #b46b52); text-decoration: none;">&larr; All educator openings</a>
+    <span style="margin: 0 12px; opacity: .4;">/</span>
+    <span>Aterra &middot; Jul&ndash;Aug 2026</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-role-page">
+  <div class="hero-role-page-bg"></div>
+  <div class="hero-role-page-content">
+    <h1>Cohli is hiring educators</h1>
+    <p class="hero-role-page-sub">Hold the learning space for ~15 children, ages 2&ndash;12, in the Alentejo forest. Up to 10 families. 4 weeks. Two roles open: Lead and Assistant.</p>
+    <p class="hero-role-page-meta">Aterra &middot; Alentejo, Portugal &middot; July 5 &ndash; August 1, 2026</p>
+    <a href="#apply-en" class="hero-role-page-cta">
+      Apply
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<div class="gallery-strip gallery">
+  <img src="/img/aterra/aterra-life-01.jpg" alt="Kids at Aterra" data-caption="Kids in the forest &mdash; Aterra" loading="lazy">
+  <img src="/img/aterra/aterra-outdoor-02.jpg" alt="Aterra grounds" data-caption="Aterra grounds" loading="lazy">
+  <img src="/img/aterra/aterra-lake-01.jpg" alt="The lake" data-caption="The freshwater lake" loading="lazy">
+  <img src="/img/aterra/aterra-farm-01.jpg" alt="Aterra gardens" data-caption="Gardens you can pick from" loading="lazy">
+  <img src="/img/aterra/aterra-food-01.jpg" alt="Shared meals" data-caption="Shared meals" loading="lazy">
+</div>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle">
+  <button class="lang-btn active" data-lang="en">English</button>
+  <button class="lang-btn" data-lang="es">Espa&ntilde;ol</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ENGLISH VERSION (default)
+     ═══════════════════════════════════════════════════════════ -->
+<div class="lang-section active" id="lang-en">
+
+<!-- CONTEXT -->
+<section class="context-section">
+  <div class="section-inner context-content" style="padding: 60px 24px;">
+    <div class="section-label fade-in">About Cohli</div>
+    <p class="context-text fade-in">Cohli is a global community of nomadic families co-creating intentional coliving and learning experiences around the world. In summer 2026, we're bringing a cohort of up to 10 families to <strong>Aterra</strong> &mdash; an ecological retreat in the Alentejo coastal forest of Southern Portugal. It's a living project of yurts, tipis, cabins, a freshwater lake, orchards, and gardens kids can actually pick from.</p>
+    <p class="context-text fade-in">We're looking for two people to hold the learning space for the ~15 children travelling with us: a <strong>Lead Educator</strong> and an <strong>Assistant Educator</strong>.</p>
+  </div>
+</section>
+
+<!-- THE ROLE -->
+<section class="section" id="the-role">
+  <div class="section-inner">
+    <div class="section-label fade-in">The Role</div>
+    <h2 class="section-title fade-in">Educators, not teachers in a classroom</h2>
+    <p class="section-desc fade-in">You hold the learning space for our kids across 4 weeks &mdash; a mixed-age group (2&ndash;12), multilingual, curious, and used to travelling. You're not running a school. You're holding a living, place-based, project-led learning environment that fits the rhythm of a coliving cohort.</p>
+
+    <ul class="resp-list fade-in">
+      <li>Hold the learning space roughly 4 hours/day, Monday to Friday &mdash; usually mornings.</li>
+      <li>Co-design weekly themes that weave place (forest, lake, gardens, Portuguese culture) with self-directed exploration.</li>
+      <li>Run morning circles, project work blocks, outdoor/nature sessions, and closing rituals.</li>
+      <li>Hold the mixed-age group well. The youngest need different rhythms than the tweens &mdash; that's where the Lead + Assistant split earns its keep.</li>
+      <li>Communicate weekly with parents &mdash; a short "what we're learning" note, plus 1:1 conversations as needed.</li>
+      <li>Light coordination with the Cohli facilitator and the Aterra team. Operations aren't your job.</li>
+    </ul>
+
+    <div class="quote-block fade-in">
+      <p class="quote-text">"You're not delivering a curriculum. You're holding a question &mdash; what does it look like for these specific kids, in this specific place, to learn together for four weeks?"</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE RESIDENCY -->
+<section class="section" style="background: white;">
+  <div class="section-inner">
+    <div class="section-label fade-in">The Residency</div>
+    <h2 class="section-title fade-in">Aterra, Portugal</h2>
+    <p class="section-desc fade-in">What you need to know about the experience.</p>
+
+    <div class="details-grid fade-in">
+      <div class="detail-card">
+        <div class="detail-label">Location</div>
+        <div class="detail-value">Aterra<br>Alentejo coast, Portugal</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Dates</div>
+        <div class="detail-value">July 5 &ndash; August 1<br>2026 (4 weeks)</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Families</div>
+        <div class="detail-value">Up to 10<br>(international mix)</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Children</div>
+        <div class="detail-value">~15 kids<br>ages 2&ndash;12</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">On-site Support</div>
+        <div class="detail-value">Claudia &amp; Francisco (hosts),<br>kitchen, ops, Cohli founders</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO TRACKS -->
+<section class="section" id="how-to-join">
+  <div class="section-inner">
+    <div class="section-label fade-in">Two Open Roles</div>
+    <h2 class="section-title fade-in">Lead Educator or Assistant Educator</h2>
+    <p class="section-desc fade-in">Two roles, one program. We're happy to consider you for either &mdash; and you can apply for both if that fits.</p>
+
+    <div class="role-grid">
+      <div class="role-card preferred fade-in">
+        <span class="role-card-badge">&#9733; Lead</span>
+        <h3 class="role-card-title">Lead Educator</h3>
+        <p class="role-card-desc">You design and hold the learning program. You bring the pedagogical spine &mdash; the weekly themes, the project arcs, the way morning circle actually lands. You co-hold the older kids (6&ndash;12) closely and keep a steady connection with the Assistant, who holds the youngest group most of the time.</p>
+        <div class="role-card-exchange">
+          <strong>What we offer:</strong> Private accommodation and all meals covered for the 4 weeks, plus a weekly stipend. The stipend is discussed individually and reflects your experience and whether you bring partner/kids.
+        </div>
+        <p class="role-card-note">A great fit for experienced educators with real fluency in mixed-age, project-based, or place-based learning (Reggio, Montessori, forest school, Waldorf, democratic schools &mdash; or serious self-directed practice).</p>
+      </div>
+
+      <div class="role-card fade-in">
+        <h3 class="role-card-title">Assistant Educator</h3>
+        <p class="role-card-desc">You support the Lead across the day and take primary presence with the youngest group (2&ndash;5). You run free-play and nature windows, hold rest time, co-run outings, and help keep the daily rhythm calm when the group gets wide.</p>
+        <div class="role-card-exchange">
+          <strong>What we offer:</strong> Private accommodation and all meals covered, plus a smaller weekly stipend (again, discussed individually).
+        </div>
+        <p class="role-card-note">A great fit for educators earlier in their career, people trained in early years, or experienced educators who want a supporting role during a season that matters to them. You'll learn a lot alongside a strong Lead.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 32px; font-size: .92rem; color: var(--stone); font-style: italic; text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;">Teaching family? If you'd like to bring your partner and kids to live in the cohort while you teach, that's possible &mdash; mention it in your application and we'll talk through what fits.</p>
+  </div>
+</section>
+
+<!-- WHO WE'RE LOOKING FOR -->
+<section class="section" id="who-we-want" style="background: white;">
+  <div class="section-inner">
+    <div class="section-label fade-in">Who We're Looking For</div>
+    <h2 class="section-title fade-in">Not a job listing. A kind of person.</h2>
+    <p class="section-desc fade-in">Less a checklist of certifications, more a portrait of the person we believe will flourish in the role.</p>
+
+    <div class="traits-grid">
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Real teaching practice</h3>
+        <p class="trait-desc">You've led mixed-age groups before. You've worked with kids who don't look or sound the same. You know what it takes to hold a morning circle that isn't just tokenistic.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Place as the primary text</h3>
+        <p class="trait-desc">You don't need worksheets to teach. Gardens, kitchens, a walk to the lake, a conversation with a local &mdash; you can turn any of those into real learning.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Calm presence, clear limits</h3>
+        <p class="trait-desc">You hold groups with warmth. You can say no without damage. You know that limits are a form of love when they're consistent.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Travelling kids energy</h3>
+        <p class="trait-desc">You've worked with nomadic or worldschooling families, or you're genuinely curious about them. Our kids have lived more places by age 7 than most adults.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Languages</h3>
+        <p class="trait-desc">English is the working language of the cohort. Spanish, Portuguese, or French are a serious bonus &mdash; we expect an international family mix.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Ask for support</h3>
+        <p class="trait-desc">The maturity to name what's hard and ask for help early. We operate as a small team. Nobody holds anything alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL RECEIVE -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label fade-in">What You'll Receive</div>
+    <h2 class="section-title fade-in">Everything we put at your disposal</h2>
+
+    <div class="receive-grid">
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#127968;</div>
+        <div>
+          <div class="receive-title">Accommodation &amp; meals</div>
+          <p class="receive-text">Private accommodation at Aterra (yurt, tipi, cabin, or bell tent depending on availability) plus all meals, fully covered for the 4 weeks.</p>
+        </div>
+      </div>
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#128176;</div>
+        <div>
+          <div class="receive-title">Weekly stipend</div>
+          <p class="receive-text">A weekly stipend, paid in EUR. Discussed individually &mdash; Lead and Assistant rates differ, and we adjust for whether you bring family.</p>
+        </div>
+      </div>
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#128218;</div>
+        <div>
+          <div class="receive-title">Cohli Kids framework</div>
+          <p class="receive-text">Our six-capability framework (Inner Foundations, Nature Intelligence, Creativity, Inquiry, Global Citizenship, Practical Life) &mdash; a spine, not a script.</p>
+        </div>
+      </div>
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#127909;</div>
+        <div>
+          <div class="receive-title">Weekly founder support</div>
+          <p class="receive-text">Lauren (who holds Cohli Kids) and Tiago on a call each week, plus WhatsApp for anything urgent.</p>
+        </div>
+      </div>
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#11088;</div>
+        <div>
+          <div class="receive-title">Reference &amp; community</div>
+          <p class="receive-text">A written reference, membership in the Cohli educator community, and priority consideration for future cohorts if you want to continue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST SECTION -->
+<section class="section honest-section">
+  <div class="section-inner">
+    <div class="section-label fade-in">Reality Check</div>
+    <h2 class="section-title fade-in">We want to be upfront</h2>
+    <p class="section-desc fade-in">So the right people self-select.</p>
+
+    <div class="honest-grid">
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">Not a vacation</h3>
+        <p class="honest-card-text">You'll be working. The days are full, the kids are full of energy, and the unexpected is daily. You'll be tired. And it'll be worth it.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">Not a traditional school</h3>
+        <p class="honest-card-text">No curriculum mandates, no standardised tests. You bring the structure, but the place is the syllabus &mdash; that's both the freedom and the responsibility.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">Community has friction</h3>
+        <p class="honest-card-text">You'll live alongside the families. That's beautiful and sometimes complicated. Clear boundaries and honest communication matter a lot here.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">We're still iterating</h3>
+        <p class="honest-card-text">Cohli is young. The model improves cohort by cohort. We deeply value educators who help us make it better &mdash; your feedback shapes what we become.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-role-cta" id="apply-en">
+  <div class="section-role-cta-inner fade-in">
+    <h2>Sound right? Tell us about you.</h2>
+    <p>Send us a short note &mdash; who you are, what your teaching practice looks like, and whether you're drawn to the Lead or Assistant role (or both). No formal CV needed &mdash; we'd rather meet you than your resume.</p>
+    <a href="mailto:welcome@cohli.com?subject=Educator%20%E2%80%94%20Aterra%20Jul%2DAug%202026&amp;body=Hi%20Lauren%20%26%20Tiago%2C%0A%0AI'd%20like%20to%20apply%20for%20the%20Educator%20role%20at%20Aterra%20(Jul%E2%80%93Aug%202026).%0A%0ARole%20I'm%20applying%20for%3A%20%5BLead%20%2F%20Assistant%20%2F%20either%5D%0AName%3A%0ABased%20in%3A%0ATeaching%20experience%20%26%20style%3A%0AAges%20I%20most%20love%20to%20teach%3A%0ALanguages%3A%0AAnything%20you'd%20like%20us%20to%20know%3A%0A%0AThanks!" class="btn-white">Write to us</a>
+    <div class="section-role-cta-email">
+      Email: <a href="mailto:welcome@cohli.com">welcome@cohli.com</a>
+    </div>
+    <p class="section-role-cta-timeline">Applications reviewed on a rolling basis. We'd love to have both roles confirmed by mid-May 2026.</p>
+  </div>
+</section>
+
+</div><!-- end lang-en -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     SPANISH VERSION
+     ═══════════════════════════════════════════════════════════ -->
+<div class="lang-section" id="lang-es">
+
+<!-- CONTEXT -->
+<section class="context-section">
+  <div class="section-inner context-content" style="padding: 60px 24px;">
+    <div class="section-label fade-in">Sobre Cohli</div>
+    <p class="context-text fade-in">Cohli es una comunidad global de familias n&oacute;madas que co-crea experiencias de coliving y aprendizaje intencional alrededor del mundo. En el verano del 2026 llevaremos una cohorte de hasta 10 familias a <strong>Aterra</strong> &mdash; un refugio ecol&oacute;gico en el bosque costero del Alentejo, en el sur de Portugal. Un proyecto vivo de yurtas, tipis, caba&ntilde;as, un lago de agua dulce, huertas y jardines donde los ni&ntilde;os pueden recolectar de verdad.</p>
+    <p class="context-text fade-in">Buscamos a dos personas para sostener el espacio de aprendizaje con los ~15 ni&ntilde;os/as que viajan con nosotros: un/a <strong>Educador/a L&iacute;der</strong> y un/a <strong>Educador/a Asistente</strong>.</p>
+  </div>
+</section>
+
+<!-- THE ROLE -->
+<section class="section" id="el-rol">
+  <div class="section-inner">
+    <div class="section-label fade-in">El Rol</div>
+    <h2 class="section-title fade-in">Educadores/as, no profesores de aula</h2>
+    <p class="section-desc fade-in">Sostienes el espacio de aprendizaje de nuestros ni&ntilde;os/as durante 4 semanas &mdash; un grupo de edades mixtas (2&ndash;12), multiling&uuml;e, curioso y acostumbrado a viajar. No es una escuela. Es un entorno vivo, ligado al lugar, basado en proyectos, que acompa&ntilde;a el ritmo de una cohorte de coliving.</p>
+
+    <ul class="resp-list fade-in">
+      <li>Sostener el espacio de aprendizaje unas 4 horas al d&iacute;a, de lunes a viernes &mdash; generalmente por la ma&ntilde;ana.</li>
+      <li>Co-dise&ntilde;ar temas semanales que tejan el lugar (bosque, lago, huertas, cultura portuguesa) con la exploraci&oacute;n auto-dirigida.</li>
+      <li>Liderar c&iacute;rculos de la ma&ntilde;ana, bloques de proyecto, salidas a la naturaleza y rituales de cierre.</li>
+      <li>Sostener bien el grupo de edades mixtas. Los m&aacute;s peque&ntilde;os necesitan ritmos distintos &mdash; para eso existe la divisi&oacute;n L&iacute;der + Asistente.</li>
+      <li>Comunicaci&oacute;n semanal con las familias &mdash; una nota corta de "qu&eacute; estamos aprendiendo", m&aacute;s conversaciones 1:1 cuando haga falta.</li>
+      <li>Coordinaci&oacute;n ligera con el/la facilitador/a de Cohli y el equipo de Aterra. Las operaciones no son tu trabajo.</li>
+    </ul>
+
+    <div class="quote-block fade-in">
+      <p class="quote-text">"No est&aacute;s entregando un curr&iacute;culo. Est&aacute;s sosteniendo una pregunta &mdash; &iquest;c&oacute;mo se ver&iacute;a que estos ni&ntilde;os/as en particular, en este lugar en particular, aprendieran juntos durante cuatro semanas?"</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE RESIDENCY -->
+<section class="section" style="background: white;">
+  <div class="section-inner">
+    <div class="section-label fade-in">La Residencia</div>
+    <h2 class="section-title fade-in">Aterra, Portugal</h2>
+    <p class="section-desc fade-in">Lo que necesitas saber sobre la experiencia.</p>
+
+    <div class="details-grid fade-in">
+      <div class="detail-card">
+        <div class="detail-label">Ubicaci&oacute;n</div>
+        <div class="detail-value">Aterra<br>Costa del Alentejo, Portugal</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Fechas</div>
+        <div class="detail-value">5 de julio &ndash; 1 de agosto<br>2026 (4 semanas)</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Familias</div>
+        <div class="detail-value">Hasta 10<br>(mezcla internacional)</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Ni&ntilde;os/as</div>
+        <div class="detail-value">~15<br>edades 2&ndash;12</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Apoyo en Sitio</div>
+        <div class="detail-value">Claudia y Francisco (anfitriones),<br>cocina, ops, fundadores de Cohli</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO TRACKS -->
+<section class="section" id="participar">
+  <div class="section-inner">
+    <div class="section-label fade-in">Dos Roles Abiertos</div>
+    <h2 class="section-title fade-in">Educador/a L&iacute;der o Educador/a Asistente</h2>
+    <p class="section-desc fade-in">Dos roles, un mismo programa. Estamos abiertos a considerarte para cualquiera de los dos &mdash; o para ambos, si te encaja.</p>
+
+    <div class="role-grid">
+      <div class="role-card preferred fade-in">
+        <span class="role-card-badge">&#9733; L&iacute;der</span>
+        <h3 class="role-card-title">Educador/a L&iacute;der</h3>
+        <p class="role-card-desc">Dise&ntilde;as y sostienes el programa de aprendizaje. Aportas la columna pedag&oacute;gica &mdash; los temas semanales, los arcos de proyecto, la manera en que el c&iacute;rculo de la ma&ntilde;ana realmente aterriza. Sostienes de cerca al grupo de mayores (6&ndash;12) y mantienes conexi&oacute;n fluida con el/la Asistente, quien sostiene la mayor parte del tiempo al grupo de los m&aacute;s peque&ntilde;os.</p>
+        <div class="role-card-exchange">
+          <strong>Qu&eacute; ofrecemos:</strong> Alojamiento privado y todas las comidas cubiertas durante las 4 semanas, m&aacute;s un estipendio semanal. El estipendio se conversa de forma individual y refleja tu experiencia y si viajas con pareja/hijos.
+        </div>
+        <p class="role-card-note">Ideal para educadores/as con experiencia real en aprendizaje de edades mixtas, basado en proyectos o en el lugar (Reggio, Montessori, pedagog&iacute;a de bosque, Waldorf, escuelas democr&aacute;ticas &mdash; o pr&aacute;ctica auto-dirigida seria).</p>
+      </div>
+
+      <div class="role-card fade-in">
+        <h3 class="role-card-title">Educador/a Asistente</h3>
+        <p class="role-card-desc">Apoyas al/la L&iacute;der a lo largo del d&iacute;a y tomas presencia principal con el grupo m&aacute;s peque&ntilde;o (2&ndash;5). Sostienes momentos de juego libre y de naturaleza, acompa&ntilde;as los descansos, co-lideras salidas, y ayudas a mantener el ritmo diario sereno cuando el grupo se abre.</p>
+        <div class="role-card-exchange">
+          <strong>Qu&eacute; ofrecemos:</strong> Alojamiento privado y todas las comidas cubiertas, m&aacute;s un estipendio semanal m&aacute;s modesto (tambi&eacute;n conversado individualmente).
+        </div>
+        <p class="role-card-note">Ideal para educadores/as en una etapa m&aacute;s temprana de su carrera, personas con formaci&oacute;n en primera infancia, o educadores con experiencia que quieren un rol de apoyo durante una temporada que les importa. Aprender&aacute;s mucho junto a un/a L&iacute;der fuerte.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 32px; font-size: .92rem; color: var(--stone); font-style: italic; text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;">&iquest;Familia docente? Si quieres traer a tu pareja e hijos/as a vivir la cohorte mientras ense&ntilde;as, es posible &mdash; menci&oacute;nalo en tu postulaci&oacute;n y conversamos qu&eacute; encaja.</p>
+  </div>
+</section>
+
+<!-- WHO WE'RE LOOKING FOR -->
+<section class="section" id="buscamos" style="background: white;">
+  <div class="section-inner">
+    <div class="section-label fade-in">A Qui&eacute;n Buscamos</div>
+    <h2 class="section-title fade-in">No es una oferta de empleo. Es un tipo de persona.</h2>
+    <p class="section-desc fade-in">Menos una lista de certificaciones, m&aacute;s un retrato de la persona que creemos que florecer&aacute; en este rol.</p>
+
+    <div class="traits-grid">
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Pr&aacute;ctica docente real</h3>
+        <p class="trait-desc">Has liderado grupos de edades mixtas. Has trabajado con ni&ntilde;os/as que no se parecen ni suenan igual. Sabes qu&eacute; hace falta para sostener un c&iacute;rculo de la ma&ntilde;ana que no sea puro tr&aacute;mite.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">El lugar como texto principal</h3>
+        <p class="trait-desc">No necesitas fichas para ense&ntilde;ar. Una huerta, una cocina, una caminata al lago, una conversaci&oacute;n con alguien del pueblo &mdash; puedes convertir cualquiera de esas cosas en aprendizaje real.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Presencia calmada, l&iacute;mites claros</h3>
+        <p class="trait-desc">Sostienes grupos con calidez. Sabes decir que no sin hacer da&ntilde;o. Entiendes que los l&iacute;mites, cuando son consistentes, son una forma de cuidado.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Energ&iacute;a de ni&ntilde;os/as viajeros</h3>
+        <p class="trait-desc">Has trabajado con familias n&oacute;madas o worldschoolers, o tienes una curiosidad genuina por ellas. Nuestros ni&ntilde;os/as han vivido en m&aacute;s lugares a los 7 a&ntilde;os que la mayor&iacute;a de adultos.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Idiomas</h3>
+        <p class="trait-desc">El ingl&eacute;s es el idioma de trabajo de la cohorte. Espa&ntilde;ol, portugu&eacute;s o franc&eacute;s son un plus importante &mdash; esperamos una mezcla internacional.</p>
+      </div>
+      <div class="trait-card fade-in">
+        <h3 class="trait-title">Pedir apoyo</h3>
+        <p class="trait-desc">La madurez para nombrar lo que cuesta y pedir ayuda temprano. Operamos como un equipo peque&ntilde;o. Nadie sostiene nada solo/a.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL RECEIVE -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label fade-in">Qu&eacute; Recibir&aacute;s</div>
+    <h2 class="section-title fade-in">Todo lo que ponemos a tu disposici&oacute;n</h2>
+
+    <div class="receive-grid">
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#127968;</div>
+        <div>
+          <div class="receive-title">Alojamiento y comidas</div>
+          <p class="receive-text">Alojamiento privado en Aterra (yurta, tipi, caba&ntilde;a o carpa bell seg&uacute;n disponibilidad) y todas las comidas, completamente cubiertas durante las 4 semanas.</p>
+        </div>
+      </div>
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#128176;</div>
+        <div>
+          <div class="receive-title">Estipendio semanal</div>
+          <p class="receive-text">Un estipendio semanal, pagado en EUR. Conversado de forma individual &mdash; las tarifas de L&iacute;der y Asistente difieren, y se ajustan si viajas con familia.</p>
+        </div>
+      </div>
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#128218;</div>
+        <div>
+          <div class="receive-title">Marco Cohli Kids</div>
+          <p class="receive-text">Nuestro marco de seis capacidades (Fundamentos Internos, Inteligencia de la Naturaleza, Creatividad, Indagaci&oacute;n, Ciudadan&iacute;a Global, Vida Pr&aacute;ctica) &mdash; una columna, no un gui&oacute;n.</p>
+        </div>
+      </div>
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#127909;</div>
+        <div>
+          <div class="receive-title">Apoyo semanal de fundadores</div>
+          <p class="receive-text">Lauren (que sostiene Cohli Kids) y Tiago en una llamada cada semana, m&aacute;s WhatsApp para cualquier urgencia.</p>
+        </div>
+      </div>
+      <div class="receive-card fade-in">
+        <div class="receive-icon">&#11088;</div>
+        <div>
+          <div class="receive-title">Referencia y comunidad</div>
+          <p class="receive-text">Una referencia escrita, membres&iacute;a en la comunidad de educadores de Cohli, y prioridad para futuras cohortes si quieres continuar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST SECTION -->
+<section class="section honest-section">
+  <div class="section-inner">
+    <div class="section-label fade-in">Un Chequeo de Realidad</div>
+    <h2 class="section-title fade-in">Queremos ser transparentes</h2>
+    <p class="section-desc fade-in">Para que las personas adecuadas se auto-seleccionen.</p>
+
+    <div class="honest-grid">
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">No son vacaciones</h3>
+        <p class="honest-card-text">Trabajar&aacute;s. Los d&iacute;as son plenos, los ni&ntilde;os/as tienen energ&iacute;a, y lo inesperado es diario. Estar&aacute;s cansado/a. Y habr&aacute; valido la pena.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">No es una escuela tradicional</h3>
+        <p class="honest-card-text">Sin curr&iacute;culo obligado, sin pruebas estandarizadas. T&uacute; traes la estructura, pero el lugar es el programa &mdash; esa es la libertad y la responsabilidad.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">La comunidad tiene fricci&oacute;n</h3>
+        <p class="honest-card-text">Vivir&aacute;s junto a las familias. Eso es hermoso y a veces complicado. Los l&iacute;mites claros y la comunicaci&oacute;n honesta importan mucho aqu&iacute;.</p>
+      </div>
+      <div class="honest-card fade-in">
+        <h3 class="honest-card-title">Todav&iacute;a iteramos</h3>
+        <p class="honest-card-text">Cohli es joven. El modelo mejora cohorte a cohorte. Valoramos profundamente a los educadores que nos ayudan a mejorarlo &mdash; tu feedback moldea lo que llegamos a ser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-role-cta" id="apply">
+  <div class="section-role-cta-inner fade-in">
+    <h2>&iquest;Te Interesa?</h2>
+    <p>Escr&iacute;benos una nota corta &mdash; qui&eacute;n eres, c&oacute;mo se ve tu pr&aacute;ctica docente, y si te llama m&aacute;s el rol de L&iacute;der o de Asistente (o ambos). No necesitas un CV formal &mdash; preferimos conocerte a ti, no tu curr&iacute;culo.</p>
+    <a href="mailto:welcome@cohli.com?subject=Educador%2Fa%20%E2%80%94%20Aterra%20Jul%2DAgo%202026&amp;body=Hola%20Lauren%20y%20Tiago%2C%0A%0AMe%20gustar%C3%ADa%20postularme%20al%20rol%20de%20Educador%2Fa%20en%20Aterra%20(jul%E2%80%93ago%202026).%0A%0ARol%20que%20me%20interesa%3A%20%5BL%C3%ADder%20%2F%20Asistente%20%2F%20cualquiera%5D%0ANombre%3A%0AD%C3%B3nde%20vivo%3A%0AExperiencia%20y%20enfoque%20docente%3A%0AEdades%20que%20m%C3%A1s%20amo%20ense%C3%B1ar%3A%0AIdiomas%3A%0ALo%20que%20quieras%20que%20sepamos%3A%0A%0A%C2%A1Gracias!" class="btn-white">Escribirnos</a>
+    <div class="section-role-cta-email">
+      Email: <a href="mailto:welcome@cohli.com">welcome@cohli.com</a>
+    </div>
+    <p class="section-role-cta-timeline">Las postulaciones se revisan de forma continua. Nos encantar&iacute;a tener los dos roles confirmados para mediados de mayo de 2026.</p>
+  </div>
+</section>
+
+</div><!-- end lang-es -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <a href="/" class="logo" style="color:white; font-family:var(--font-headline); font-size:1.4rem; text-decoration:none;">cohli</a>
+      <p style="font-size:.85rem; margin-top:8px; max-width:240px;">Belonging that travels.<br>Community without compromise.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="/#cohorts">Upcoming Cohorts</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#story">Our Story</a>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <a href="/#newsletter">The Village Post</a>
+      <a href="https://instagram.com/heycohli" rel="noopener" target="_blank">Instagram</a>
+    </div>
+    <div class="footer-col">
+      <h4>Work With Us</h4>
+      <a href="/partner.html">Partner With Us</a>
+      <a href="/educator.html">Teach With Us</a>
+      <a href="/facilitator.html">Facilitate With Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Cohli LLC. All rights reserved.
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/js/main.js"></script>
+<script>
+  // Nav link sets per language
+  const navData = {
+    en: {
+      links: [
+        { href: '#the-role', text: 'The Role' },
+        { href: '#how-to-join', text: 'How to Join' },
+        { href: '#who-we-want', text: 'Who We Look For' }
+      ],
+      cta: { href: '#apply-en', text: 'Apply' },
+      sub: 'Educator'
+    },
+    es: {
+      links: [
+        { href: '#el-rol', text: 'El Rol' },
+        { href: '#participar', text: 'C\u00f3mo Participar' },
+        { href: '#buscamos', text: 'A Qui\u00e9n Buscamos' }
+      ],
+      cta: { href: '#apply', text: 'Postularme' },
+      sub: 'Educador/a'
+    }
+  };
+
+  function updateNav(lang) {
+    const data = navData[lang];
+    // Desktop nav
+    const navLinks = document.querySelector('.nav-links');
+    const desktopAnchors = navLinks.querySelectorAll('a:not(.nav-cta)');
+    desktopAnchors.forEach((a, i) => {
+      if (data.links[i]) { a.href = data.links[i].href; a.textContent = data.links[i].text; }
+    });
+    const desktopCta = navLinks.querySelector('.nav-cta');
+    desktopCta.href = data.cta.href; desktopCta.textContent = data.cta.text;
+    // Mobile menu
+    const mobileAnchors = document.querySelectorAll('#mobileMenu a:not(.nav-cta)');
+    mobileAnchors.forEach((a, i) => {
+      if (data.links[i]) { a.href = data.links[i].href; a.textContent = data.links[i].text; }
+    });
+    const mobileCta = document.querySelector('#mobileMenu .nav-cta');
+    mobileCta.href = data.cta.href; mobileCta.textContent = data.cta.text;
+    // Logo sub
+    document.querySelector('.logo-sub').textContent = data.sub;
+    // html lang attribute
+    document.documentElement.setAttribute('lang', lang);
+  }
+
+  // Language toggle
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      // Update nav links and text
+      updateNav(lang);
+      // Re-observe fade-in elements in the newly visible section
+      document.querySelectorAll('#lang-' + lang + ' .fade-in').forEach(el => {
+        el.classList.remove('visible');
+        if (typeof fadeObserver !== 'undefined') fadeObserver.observe(el);
+      });
+      // Scroll to top of content
+      document.querySelector('.lang-toggle').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+<script src="/js/whatsapp-button.js" defer></script>
+</body>
+</html>

@@ -244,43 +244,7 @@
       color: white;
     }
 
-    /* Honest section */
-    .section-honest {
-      background: var(--driftwood);
-      color: white;
-    }
-    .section-honest .section-title,
-    .section-honest .section-label {
-      color: white;
-    }
-    .section-honest .section-desc {
-      color: rgba(255,255,255,.9);
-    }
-    .honest-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px;
-      margin-top: 40px;
-    }
-    .honest-card {
-      background: rgba(255,255,255,.1);
-      padding: 32px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(255,255,255,.2);
-      backdrop-filter: blur(8px);
-    }
-    .honest-card-title {
-      font-family: var(--font-headline);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 12px;
-    }
-    .honest-card-text {
-      font-size: .9rem;
-      color: rgba(255,255,255,.85);
-      line-height: 1.6;
-    }
+    /* Honest / Reality Check section — styles live in base.css (.honest-section) */
 
     /* CTA section */
     .section-educator-cta {
@@ -598,6 +562,21 @@
     <p class="section-desc fade-in">Each opening is a specific cohort with its own context, rhythm, and timing. Click in to see the full role and apply.</p>
 
     <div style="display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 30px;">
+      <a href="/roles/educator-aterra-jul-2026.html" style="display: grid; grid-template-columns: 220px 1fr auto; gap: 24px; align-items: center; background: white; border: 1px solid var(--clay); border-radius: 14px; padding: 22px; text-decoration: none; color: inherit; transition: all .2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(67,49,40,.08)';this.style.borderColor='var(--terracotta)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--clay)'">
+        <div style="height: 140px; border-radius: 10px; overflow: hidden; background: var(--clay);"><img src="/img/aterra/aterra-life-01.jpg" alt="Aterra &mdash; kids in the forest" loading="lazy" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div>
+          <div style="font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--terracotta); font-weight: 700; margin-bottom: 6px;">July 5 &ndash; August 1, 2026 &middot; 4 weeks &middot; Two roles open</div>
+          <h3 style="font-family: var(--font-headline); font-size: 1.35rem; margin-bottom: 8px; line-height: 1.25;">Educators (Lead + Assistant) &mdash; Aterra, Portugal</h3>
+          <p style="color: var(--stone); font-size: .92rem; line-height: 1.5; margin-bottom: 8px;">Hold the learning space for ~15 children aged 2&ndash;12 in the Alentejo forest. One Lead, one Assistant, one place-based program. Apply for either or both.</p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span style="background: var(--alabaster); border: 1px solid var(--clay); padding: 4px 10px; border-radius: 999px; font-size: .76rem; color: var(--stone);">Alentejo, Portugal</span>
+            <span style="background: var(--alabaster); border: 1px solid var(--clay); padding: 4px 10px; border-radius: 999px; font-size: .76rem; color: var(--stone);">English (ES/PT bonus)</span>
+            <span style="background: var(--alabaster); border: 1px solid var(--clay); padding: 4px 10px; border-radius: 999px; font-size: .76rem; color: var(--stone);">Mixed ages 2&ndash;12</span>
+          </div>
+        </div>
+        <div style="color: var(--terracotta); font-size: 1.5rem; padding: 0 8px;">&rarr;</div>
+      </a>
+
       <a href="/roles/educator-casa-sumapaz-jun-2026.html" style="display: grid; grid-template-columns: 220px 1fr auto; gap: 24px; align-items: center; background: white; border: 1px solid var(--clay); border-radius: 14px; padding: 22px; text-decoration: none; color: inherit; transition: all .2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(67,49,40,.08)';this.style.borderColor='var(--terracotta)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--clay)'">
         <div style="height: 140px; border-radius: 10px; overflow: hidden; background: var(--clay);"><img src="/img/casa-sumapaz/card.jpg" alt="Casa Sumapaz finca" loading="lazy" style="width:100%; height:100%; object-fit:cover;"></div>
         <div>
@@ -614,7 +593,7 @@
       </a>
     </div>
 
-    <p style="margin-top: 24px; font-size: .9rem; color: var(--stone); text-align: center;">More cohorts opening through 2026. Aterra (Alentejo, Portugal · Jul–Aug) is held by our on-site team. Further teacher openings will appear here as new cohorts confirm.</p>
+    <p style="margin-top: 24px; font-size: .9rem; color: var(--stone); text-align: center;">More cohorts opening through 2026. Further teacher openings will appear here as new cohorts confirm.</p>
   </div>
 </section>
 
@@ -837,10 +816,10 @@
 </section>
 
 <!-- HONEST SECTION -->
-<section class="section section-honest">
+<section class="section honest-section">
   <div class="section-inner">
-    <div class="section-label fade-in" style="color:white;">The Real Talk</div>
-    <h2 class="section-title fade-in">What We're Honest About</h2>
+    <div class="section-label fade-in">Reality Check</div>
+    <h2 class="section-title fade-in">What we're honest about</h2>
     <p class="section-desc fade-in">This role is not for everyone. Here's what you should know before you apply.</p>
 
     <div class="honest-grid">

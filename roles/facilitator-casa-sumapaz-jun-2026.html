@@ -248,29 +248,7 @@
       font-size: .85rem; color: var(--stone); line-height: 1.6;
     }
 
-    /* Honest section */
-    .section-honest { background: var(--driftwood); color: white; }
-    .section-honest .section-title,
-    .section-honest .section-label { color: white; }
-    .section-honest .section-desc { color: rgba(255,255,255,.9); }
-    .honest-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px; margin-top: 40px;
-    }
-    .honest-card {
-      background: rgba(255,255,255,.1); padding: 32px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(255,255,255,.2);
-      backdrop-filter: blur(8px);
-    }
-    .honest-card-title {
-      font-family: var(--font-headline); font-size: 1.1rem;
-      font-weight: 700; color: white; margin-bottom: 12px;
-    }
-    .honest-card-text {
-      font-size: .9rem; color: rgba(255,255,255,.85); line-height: 1.6;
-    }
+    /* Honest / Reality Check section — styles live in base.css (.honest-section) */
 
     /* CTA section */
     .section-facilitator-cta {
@@ -607,9 +585,9 @@
 </section>
 
 <!-- HONEST SECTION -->
-<section class="section section-honest">
+<section class="section honest-section">
   <div class="section-inner">
-    <div class="section-label fade-in" style="color:white;">Qué NO Es Esto</div>
+    <div class="section-label fade-in">Un Chequeo de Realidad</div>
     <h2 class="section-title fade-in">Queremos ser transparentes</h2>
     <p class="section-desc fade-in">Para que las personas adecuadas se auto-seleccionen.</p>
 
@@ -817,9 +795,9 @@
 </section>
 
 <!-- HONEST SECTION -->
-<section class="section section-honest">
+<section class="section honest-section">
   <div class="section-inner">
-    <div class="section-label fade-in" style="color:white;">What This Is Not</div>
+    <div class="section-label fade-in">Reality Check</div>
     <h2 class="section-title fade-in">We want to be upfront</h2>
     <p class="section-desc fade-in">So the right people self-select.</p>
 
