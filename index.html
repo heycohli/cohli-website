@@ -546,8 +546,86 @@
       <div class="section-label">The Village Post</div>
       <div class="section-title" style="font-size:1.8rem;">A letter from us, every other week</div>
       <p style="color:var(--stone); font-size:.95rem;">What we're learning about each cohort, worldschooling, and what it really looks like when families choose differently. Written by us and sent to you.</p>
-      <!-- ActiveCampaign raw form HTML (AC's <style> block removed so our home.css overrides take over cleanly).
+      <!-- ActiveCampaign raw form HTML (AC's <style> block removed so our overrides take over cleanly).
+           Styles scoped inline below to guarantee they load with the HTML (cache-bust-proof).
            If AC ever regenerates form ID 3, the `or` hash below may need to be refreshed from AC → Integrate → Full Embed. -->
+      <style>
+        .newsletter-ac-wrap { margin-top: 24px; }
+        .newsletter-ac-wrap form,
+        .newsletter-ac-wrap ._form,
+        .newsletter-ac-wrap ._form_3 {
+          background: transparent !important; border: none !important; box-shadow: none !important;
+          padding: 0 !important; margin: 0 !important; max-width: none !important; width: 100% !important;
+          color: var(--dark) !important; font-family: var(--font-body) !important;
+        }
+        .newsletter-ac-wrap label,
+        .newsletter-ac-wrap ._form-label,
+        .newsletter-ac-wrap .field-required,
+        .newsletter-ac-wrap ._form-branding,
+        .newsletter-ac-wrap ._form-title,
+        .newsletter-ac-wrap ._form-subtitle { display: none !important; }
+        .newsletter-ac-wrap ._form-content {
+          display: flex !important; gap: 12px !important; flex-wrap: wrap !important;
+          justify-content: center !important; align-items: center !important;
+          margin: 0 !important; padding: 0 !important; width: 100%;
+        }
+        .newsletter-ac-wrap ._form_element {
+          flex: 1 1 260px !important; min-width: 240px !important; max-width: 360px !important;
+          margin: 0 !important; padding: 0 !important; width: auto !important;
+        }
+        .newsletter-ac-wrap ._field-wrapper { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+        .newsletter-ac-wrap input[type="text"],
+        .newsletter-ac-wrap input[type="email"],
+        .newsletter-ac-wrap input#email {
+          width: 100% !important; padding: 14px 20px !important;
+          border: 1.5px solid var(--driftwood) !important; border-radius: var(--radius-pill) !important;
+          font-family: var(--font-body) !important; font-size: .95rem !important;
+          background: white !important; background-color: white !important;
+          color: var(--dark) !important; outline: none !important;
+          transition: var(--ease) !important; box-shadow: none !important;
+          height: auto !important; line-height: 1.4 !important; box-sizing: border-box !important;
+          margin: 0 !important; text-align: left !important;
+        }
+        .newsletter-ac-wrap input[type="text"]:focus,
+        .newsletter-ac-wrap input[type="email"]:focus { border-color: var(--terracotta) !important; }
+        .newsletter-ac-wrap ._button-wrapper {
+          flex: 0 0 auto !important; margin: 0 !important; padding: 0 !important;
+          width: auto !important; position: static !important; top: auto !important;
+        }
+        .newsletter-ac-wrap button,
+        .newsletter-ac-wrap button._submit,
+        .newsletter-ac-wrap #_form_3_submit {
+          background: var(--terracotta) !important; background-color: var(--terracotta) !important;
+          color: white !important; padding: 14px 28px !important;
+          border: none !important; border-radius: var(--radius-pill) !important;
+          font-size: .95rem !important; font-weight: 600 !important;
+          font-family: var(--font-body) !important; cursor: pointer !important;
+          transition: var(--ease) !important; width: auto !important; height: auto !important;
+          line-height: 1 !important; box-shadow: none !important; text-transform: none !important;
+          letter-spacing: 0 !important; margin: 0 !important;
+        }
+        .newsletter-ac-wrap button:hover,
+        .newsletter-ac-wrap button._submit:hover { background: var(--ember) !important; background-color: var(--ember) !important; }
+        .newsletter-ac-wrap ._form-thank-you {
+          font-family: var(--font-headline) !important; font-size: 1.2rem !important;
+          color: var(--terracotta) !important; padding: 24px 0 !important;
+          text-align: center !important; background: transparent !important;
+        }
+        .newsletter-ac-wrap ._error,
+        .newsletter-ac-wrap ._error-inner {
+          font-size: .85rem !important; color: var(--terracotta) !important;
+          margin-top: 6px !important; background: transparent !important;
+          border: none !important; padding: 0 !important; font-family: var(--font-body) !important;
+          position: static !important;
+        }
+        .newsletter-ac-wrap ._clear-element { display: none !important; }
+        @media (max-width: 540px) {
+          .newsletter-ac-wrap ._form-content { flex-direction: column !important; align-items: stretch !important; }
+          .newsletter-ac-wrap ._form_element,
+          .newsletter-ac-wrap ._button-wrapper { width: 100% !important; max-width: none !important; flex: 1 1 100% !important; }
+          .newsletter-ac-wrap button { width: 100% !important; }
+        }
+      </style>
       <div class="newsletter-ac-wrap">
         <form method="POST" action="https://nomadnest.activehosted.com/proc.php" id="_form_3_" class="_form _form_3 _inline-form _inline-style _dark" novalidate data-styles-version="5">
           <input type="hidden" name="u" value="3" />
