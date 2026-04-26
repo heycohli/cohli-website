@@ -199,7 +199,7 @@
       <div class="section-label fade-in">Past & Future Cohorts</div>
       <p class="section-desc fade-in" style="margin-bottom:24px;">Where we've been, and where we're going next.</p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px;">
+      <div class="past-cohorts-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px;">
         <div class="past-card fade-in" style="padding:0; background:white; border-radius:12px; border:1px solid var(--clay); overflow:hidden;">
           <div style="height:140px; overflow:hidden;"><img src="/img/con-smania/card.jpg" alt="Con Smania eco-retreat in Costa Rica" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
           <div style="padding:16px 20px 20px;">
@@ -230,7 +230,7 @@
           </div>
         </div>
 
-        <div class="past-card fade-in" style="padding:0; background:white; border-radius:12px; border:1px solid var(--clay); overflow:hidden;">
+        <div class="past-card past-card-extra fade-in" style="padding:0; background:white; border-radius:12px; border:1px solid var(--clay); overflow:hidden;">
           <div style="height:140px; overflow:hidden;"><img src="/img/onze/card.jpg" alt="ONZE jungle sanctuary in the Riviera Maya" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
           <div style="padding:16px 20px 20px;">
             <div style="font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--terracotta); margin-bottom:4px;">Interest List Open</div>
@@ -240,7 +240,7 @@
           </div>
         </div>
 
-        <div class="past-card fade-in" style="padding:0; background:white; border-radius:12px; border:1px solid var(--clay); overflow:hidden;">
+        <div class="past-card past-card-extra fade-in" style="padding:0; background:white; border-radius:12px; border:1px solid var(--clay); overflow:hidden;">
           <div style="height:140px; overflow:hidden;"><img src="/img/chateau-coliving/card.jpg" alt="Ch&acirc;teau Coliving — 12th-century castle on a nature reserve in Normandy" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
           <div style="padding:16px 20px 20px;">
             <div style="font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--terracotta); margin-bottom:4px;">Interest List Open</div>
@@ -250,6 +250,37 @@
           </div>
         </div>
       </div>
+
+      <!-- Mobile-only "show more" toggle for the 2 hidden cohorts -->
+      <button type="button" id="past-cohorts-show-more" class="past-cohorts-show-more-btn" onclick="document.querySelector('.past-cohorts-grid').classList.add('expanded'); this.style.display='none';">
+        See 2 more cohorts &rarr;
+      </button>
+
+      <style>
+        .past-cohorts-show-more-btn {
+          display: none;
+          margin: 24px auto 0;
+          padding: 12px 24px;
+          background: transparent;
+          border: 1.5px solid var(--driftwood);
+          border-radius: var(--radius-pill);
+          font-family: var(--font-body);
+          font-size: .9rem;
+          font-weight: 600;
+          color: var(--terracotta);
+          cursor: pointer;
+          transition: var(--ease);
+        }
+        .past-cohorts-show-more-btn:hover {
+          border-color: var(--terracotta);
+          background: rgba(180,107,82,.05);
+        }
+        @media (max-width: 640px) {
+          .past-cohorts-grid .past-card-extra { display: none; }
+          .past-cohorts-grid.expanded .past-card-extra { display: block; }
+          .past-cohorts-show-more-btn { display: block; }
+        }
+      </style>
     </div>
   </div>
 </section>
